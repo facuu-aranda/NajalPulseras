@@ -1,0 +1,47 @@
+---
+// src/components/NajalHeader.astro
+import NajalLogo from '@/components/NajalLogo.astro';
+import NajalButton from '@/components/NajalButton.astro';
+import NajalHeaderMobile from './NajalHeaderMobile.tsx'; // Importamos el componente de React
+
+const navigation = [
+  { label: "Lorem", href: "#lorem" },
+  { label: "Ipsum", href: "#ipsum" },
+  { label: "Dolor", href: "#dolor" },
+];
+const ctaText = "Contacto";
+const ctaHref = "#contacto";
+---
+<header class="bg-white shadow-sm border-b border-najal-secondary-light/20 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <a href="/">
+        <NajalLogo size="sm" />
+      </a>
+
+      <nav class="hidden md:flex space-x-8">
+        {navigation.map((item) => (
+          <a
+            href={item.href}
+            class="font-futura text-najal-primary-dark hover:text-najal-primary transition-colors"
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
+      <div class="hidden md:block">
+        <NajalButton href={ctaHref}>{ctaText}</NajalButton>
+      </div>
+
+      <div class="md:hidden">
+        <NajalHeaderMobile 
+          client:load
+          navigation={navigation}
+          ctaText={ctaText}
+          ctaHref={ctaHref}
+        />
+      </div>
+    </div>
+  </div>
+</header>

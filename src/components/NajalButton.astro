@@ -1,0 +1,42 @@
+---
+// src/components/NajalButton.astro
+import { cn } from '@/lib/utils';
+
+interface Props {
+  variant?: "primary" | "secondary" | "outline" | "ghost";
+  size?: "sm" | "md" | "lg";
+  className?: string;
+  href?: string; // Si esta prop existe, el componente será un enlace
+}
+// Usamos '...rest' para pasar cualquier otro atributo (ej. type="submit", disabled)
+const { variant = "primary", size = "md", className, href, ...rest } = Astro.props;
+
+// Lógica para decidir si el componente es un enlace o un botón
+const Tag = href ? "a" : "button";
+
+const baseClasses = "inline-flex items-center justify-center rounded-lg font-futura font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-najal-primary focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
+
+const variantClasses = {
+  primary: "bg-najal-primary text-white hover:bg-najal-primary/90",
+  secondary: "bg-najal-secondary text-white hover:bg-najal-secondary/90",
+  outline: "border-2 border-najal-primary text-najal-primary hover:bg-najal-primary hover:text-white",
+  ghost: "text-najal-primary hover:bg-najal-primary/10"
+};
+
+const sizeClasses = {
+  sm: "h-9 px-3 text-sm",
+  md: "h-11 px-6 text-base",
+  lg: "h-13 px-8 text-lg" // En tu original usaste h-13, lo mantengo. Tailwind usa h-12 para lg.
+};
+
+const finalClasses = cn(
+  baseClasses,
+  variantClasses[variant],
+  sizeClasses[size],
+  className
+);
+---
+
+<Tag class={finalClasses} href={href} {...rest}>
+  <slot />
+</Tag>

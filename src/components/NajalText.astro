@@ -1,0 +1,45 @@
+---
+// src/components/NajalText.astro
+import { cn } from '@/lib/utils';
+
+interface Props {
+  size?: "sm" | "base" | "lg" | "xl";
+  weight?: "book" | "medium" | "bold";
+  variant?: "primary" | "secondary" | "dark" | "light";
+  className?: string;
+}
+
+const { size = "base", weight = "book", variant = "dark", className } = Astro.props;
+
+const sizeClasses = {
+  sm: "text-sm",
+  base: "text-base",
+  lg: "text-lg",
+  xl: "text-xl"
+};
+
+const weightClasses = {
+  book: "font-book",
+  medium: "font-medium",
+  bold: "font-bold"
+};
+
+const variantClasses = {
+  primary: "text-najal-primary",
+  secondary: "text-najal-secondary",
+  dark: "text-najal-primary-dark",
+  light: "text-najal-secondary-light"
+};
+
+const finalClasses = cn(
+  "font-futura",
+  sizeClasses[size],
+  weightClasses[weight],
+  variantClasses[variant],
+  className
+);
+---
+
+<p class={finalClasses}>
+  <slot />
+</p>

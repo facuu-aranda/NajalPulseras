@@ -1,0 +1,24 @@
+---
+import NajalButton from "@/components/NajalButton.astro";
+import NajalHeading from "@/components/NajalHeading.astro";
+import NajalPatternBackground from "@/components/NajalPatternBackground.astro";
+import NajalText from "@/components/NajalText.astro";
+---
+<NajalPatternBackground variant="primary" className="py-20">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <NajalHeading level={2} variant="light" className="mb-6">
+      Lorem ipsum dolor sit amet consectetur
+    </NajalHeading>
+    <NajalText size="lg" className="text-white/90 mb-8">
+      Adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </NajalText>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <NajalButton size="lg" className="bg-white text-najal-primary hover:bg-white/90">
+        Lorem ipsum dolor
+      </NajalButton>
+      <NajalButton variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-najal-primary">
+        Consectetur adipiscing
+      </NajalButton>
+    </div>
+  </div>
+</NajalPatternBackground>

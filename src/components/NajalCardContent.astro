@@ -1,0 +1,8 @@
+---
+// src/components/NajalCardContent.astro
+import { cn } from '@/lib/utils';
+const { className } = Astro.props;
+---
+<div class={cn("font-futura", className)}>
+  <slot />
+</div>

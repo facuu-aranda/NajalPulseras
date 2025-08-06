@@ -1,0 +1,42 @@
+---
+import NajalButton from "@/components/NajalButton.astro";
+import NajalHeading from "@/components/NajalHeading.astro";
+import NajalPatternBackground from "@/components/NajalPatternBackground.astro";
+import NajalText from "@/components/NajalText.astro";
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  variant?: "light" | "dark" | "primary";
+}
+const { variant = "light" } = Astro.props;
+const textVariant = variant === "light" ? "dark" : "light";
+---
+<NajalPatternBackground variant={variant} className="py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <NajalHeading level={2} variant={textVariant === "dark" ? "light" : "primary"} className="mb-6">
+          Lorem ipsum dolor sit amet consectetur
+        </NajalHeading>
+        <NajalText size="lg" variant={textVariant} className="mb-6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </NajalText>
+        <NajalButton size="lg">
+          Lorem ipsum <Icon name="lucide:arrow-right" class="ml-2 h-5 w-5" />
+        </NajalButton>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="space-y-4">
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <Icon name="lucide:users" class="h-8 w-8 text-najal-primary mb-3" />
+            <NajalText weight="bold" variant={textVariant} className="mb-2">Lorem ipsum</NajalText>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <Icon name="lucide:target" class="h-8 w-8 text-najal-secondary mb-3" />
+            <NajalText weight="bold" variant={textVariant} className="mb-2">Adipiscing elit</NajalText>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</NajalPatternBackground>

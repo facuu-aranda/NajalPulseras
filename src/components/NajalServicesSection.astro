@@ -1,0 +1,44 @@
+---
+import NajalCard from "@/components/NajalCard.astro";
+import NajalCardContent from "@/components/NajalCardContent.astro";
+import NajalCardHeader from "@/components/NajalCardHeader.astro";
+import NajalCardTitle from "@/components/NajalCardTitle.astro";
+import NajalHeading from "@/components/NajalHeading.astro";
+import NajalPatternBackground from "@/components/NajalPatternBackground.astro";
+import NajalText from "@/components/NajalText.astro";
+import { Icon } from "astro-icon/components";
+
+const services = [
+  { title: "Lorem ipsum dolor", description: "Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt.", features: ["Ut enim ad minim", "Veniam quis nostrud", "Exercitation ullamco"] },
+  { title: "Consectetur adipiscing", description: "Elit sed do eiusmod tempor incididunt ut labore et dolore magna.", features: ["Quis nostrud exercitation", "Ullamco laboris nisi", "Ut aliquip ex ea"] },
+  { title: "Sed do eiusmod", description: "Tempor incididunt ut labore et dolore magna aliqua ut enim.", features: ["Commodo consequat", "Duis aute irure", "Dolor in reprehenderit"] },
+];
+---
+<NajalPatternBackground variant="light" className="py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <NajalHeading level={2} variant="primary" className="mb-4">Lorem ipsum dolor sit amet</NajalHeading>
+      <NajalText size="lg" variant="light" className="max-w-2xl mx-auto">Consectetur adipiscing elit sed do eiusmod tempor incididunt.</NajalText>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {services.map((service) => (
+        <NajalCard>
+          <NajalCardHeader>
+            <NajalCardTitle>{service.title}</NajalCardTitle>
+          </NajalCardHeader>
+          <NajalCardContent>
+            <NajalText className="mb-6">{service.description}</NajalText>
+            <ul class="space-y-2">
+              {service.features.map((feature) => (
+                <li class="flex items-center">
+                  <Icon name="lucide:check-circle" class="h-5 w-5 text-najal-primary mr-3 flex-shrink-0" />
+                  <NajalText size="sm">{feature}</NajalText>
+                </li>
+              ))}
+            </ul>
+          </NajalCardContent>
+        </NajalCard>
+      ))}
+    </div>
+  </div>
+</NajalPatternBackground>

@@ -1,0 +1,36 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import NajalHeader from '@/components/NajalHeader.astro';
+import NajalImageGallery from '@/components/NajalImageGallery.astro';
+import NajalAboutSection from '@/components/NajalAboutSection.astro';
+import NajalCTASection from '@/components/NajalCTASection.astro';
+import NajalPatternBackground from '@/components/NajalPatternBackground.astro';
+import NajalHeading from '@/components/NajalHeading.astro';
+
+const navItems = [
+  { label: "Galería", href: "#galeria" },
+  { label: "El Artesano", href: "#artesano" },
+  { label: "Contacto", href: "#contacto" },
+];
+---
+<Layout title="Landing Page C - Najal">
+  <NajalHeader navigation={navItems} />
+
+  <main>
+    <NajalPatternBackground variant="primary" class="py-32 text-center">
+        <NajalHeading level={1} variant="light" className="text-balance">
+            Donde el Arte se Convierte en Joya
+        </NajalHeading>
+    </NajalPatternBackground>
+
+    <div id="galeria">
+      <NajalImageGallery />
+    </div>
+    <div id="artesano">
+      <NajalAboutSection variant="light" />
+    </div>
+    <div id="contacto">
+      <NajalCTASection variant="dark" />
+    </div>
+  </main>
+</Layout>

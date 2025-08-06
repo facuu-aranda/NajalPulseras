@@ -1,0 +1,33 @@
+---
+// src/components/NajalProductCarousel.astro
+import NajalHeading from '@/components/NajalHeading.astro';
+// Importamos nuestra NUEVA isla de React
+import { ProductCarousel } from '@/components/ui/ProductCarousel.tsx';
+
+// Datos de ejemplo
+const products = [
+  { id: "1", image: "/product-design-studio.png", name: "Lorem Ipsum", description: "Dolor sit amet consectetur adipiscing elit sed do eiusmod.", price: "$99.99", badge: "Popular" },
+  { id: "2", image: "/modern-product.png", name: "Consectetur Adipiscing", description: "Ut labore et dolore magna aliqua enim ad minim veniam.", price: "$149.99", badge: "New" },
+  { id: "3", image: "/premium-product.png", name: "Sed Do Eiusmod", description: "Exercitation ullamco laboris nisi ut aliquip ex ea commodo.", price: "$199.99" },
+  { id: "4", image: "/innovative-design.png", name: "Tempor Incididunt", description: "Aute irure dolor in reprehenderit in voluptate velit esse.", price: "$79.99" },
+  { id: "5", image: "/elegant-solution.png", name: "Ut Labore", description: "Fugiat nulla pariatur excepteur sint occaecat cupidatat non.", price: "$129.99" },
+];
+---
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-12">
+      <NajalHeading level={2} variant="primary">
+        Nuestros Productos
+      </NajalHeading>
+    </div>
+    
+    <ProductCarousel
+      client:visible
+      items={products}
+      opts={{
+        align: "start",
+        loop: true,
+      }}
+    />
+  </div>
+</section>

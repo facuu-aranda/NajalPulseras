@@ -1,0 +1,37 @@
+---
+// src/components/NajalPatternBackground.astro
+import { cn } from '@/lib/utils';
+
+interface Props {
+  variant?: "light" | "dark" | "primary";
+  opacity?: number;
+  className?: string;
+}
+
+const { variant = "light", opacity = 0.1, className } = Astro.props;
+
+const variantClasses = {
+  light: "bg-gray-50",
+  dark: "bg-najal-primary-dark",
+  primary: "bg-najal-primary"
+};
+
+const finalClasses = cn("relative", variantClasses[variant], className);
+
+// Creamos el string para el estilo en línea
+const patternStyle = `
+  background-image: url('/najal-pattern.png');
+  background-size: 100px 100px;
+  opacity: ${opacity};
+`;
+---
+
+<div class={finalClasses}>
+  <div class="absolute inset-0 bg-repeat" style={patternStyle}></div>
+
+  {Astro.slots.has("default") && (
+    <div class="relative z-10">
+      <slot />
+    </div>
+  )}
+</div>

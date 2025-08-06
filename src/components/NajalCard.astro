@@ -1,0 +1,27 @@
+---
+// src/components/NajalCard.astro
+import { cn } from '@/lib/utils';
+
+interface Props {
+  variant?: "default" | "primary" | "secondary";
+  className?: string;
+}
+
+const { variant = "default", className } = Astro.props;
+
+const variantClasses = {
+  default: "bg-white border border-najal-secondary-light/30 text-najal-primary-dark",
+  primary: "bg-najal-primary text-white",
+  secondary: "bg-najal-secondary text-white"
+};
+
+const finalClasses = cn(
+  "rounded-xl p-6 shadow-lg",
+  variantClasses[variant],
+  className
+);
+---
+
+<div class={finalClasses}>
+  <slot />
+</div>

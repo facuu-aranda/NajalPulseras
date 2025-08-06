@@ -1,0 +1,81 @@
+---
+// src/components/NajalHero.astro
+import NajalButton from "./NajalButton.astro";
+import NajalPatternBackground from "./NajalPatternBackground.astro";
+import NajalHeading from "./NajalHeading.astro";
+import NajalText from "./NajalText.astro";
+
+interface CTA {
+  text: string;
+  href: string;
+}
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  primaryCTA?: CTA;
+  secondaryCTA?: CTA;
+  variant?: "light" | "dark" | "primary";
+}
+
+const {
+  title,
+  subtitle,
+  description,
+  primaryCTA,
+  secondaryCTA,
+  variant = "light"
+} = Astro.props;
+
+const textVariant = variant === "light" ? "dark" : "light";
+const headingVariant = textVariant === 'dark' ? 'dark' : 'light';
+---
+
+<NajalPatternBackground variant={variant} className="py-20 lg:py-32">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-4xl mx-auto">
+      {subtitle && (
+        <NajalText 
+          size="lg" 
+          weight="medium" 
+          variant={variant === "light" ? "primary" : "light"}
+          className="mb-4"
+        >
+          {subtitle}
+        </NajalText>
+      )}
+
+      <NajalHeading 
+        level={1} 
+        variant={headingVariant}
+        className="mb-6"
+      >
+        {title}
+      </NajalHeading>
+
+      {description && (
+        <NajalText 
+          size="xl" 
+          variant={textVariant}
+          className="mb-10 max-w-2xl mx-auto"
+        >
+          {description}
+        </NajalText>
+      )}
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        {primaryCTA && (
+          <NajalButton href={primaryCTA.href} size="lg">
+            {primaryCTA.text}
+          </NajalButton>
+        )}
+        {secondaryCTA && (
+          <NajalButton href={secondaryCTA.href} variant="outline" size="lg">
+            {secondaryCTA.text}
+          </NajalButton>
+        )}
+      </div>
+    </div>
+  </div>
+</NajalPatternBackground>

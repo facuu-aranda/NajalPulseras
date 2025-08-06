@@ -1,0 +1,47 @@
+---
+import '@/styles/global.css';
+import { cn } from '@/lib/utils';
+import ThemeToggle from '@/components/ThemeToggle.tsx'; // 1. Importa el nuevo componente
+
+interface Props {
+	title: string;
+    className?: string;
+}
+const { title, className } = Astro.props;
+import { ClientRouter } from "astro:transitions";
+---
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Najal Pulseras - Componentes y Diseños" />
+		  <ClientRouter  />
+    <meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		
+    {/* 2. Script para evitar el parpadeo del tema (FOUC) */}
+    <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        // Si no hay tema guardado, por defecto es oscuro
+        return 'dark';
+      })();
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+			// Esto asegura que Astro sepa el tema en el servidor
+			document.documentElement.setAttribute('data-theme', theme);
+    </script>
+	</head>
+	<body class={cn("bg-background font-futura antialiased", className)}>
+		<slot />
+    {/* 3. Añade la isla de React para el botón de tema */}
+		<ThemeToggle client:load />
+	</body>
+</html>

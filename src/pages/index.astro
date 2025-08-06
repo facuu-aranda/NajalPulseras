@@ -1,16 +1,43 @@
 ---
-
+import { Image } from 'astro:assets';
+import backgroundImage from '@/assets/header-image.jpg';
+import Layout from '@/layouts/Layout.astro';
+import NajalButton from '@/components/NajalButton.astro';
 ---
+<Layout title="Bienvenido a Najal Componentes">
+  <div class="relative min-h-screen flex flex-col items-center justify-center text-center text-white p-4 overflow-hidden">
+    <!-- Fondo con superposición oscura -->
+    <div class="absolute inset-0 z-0">
+      <Image 
+        src={backgroundImage} 
+        alt="Fondo de oficina moderna" 
+        class="w-full h-full object-cover"
+        quality={80}
+      />
+      <div class="absolute inset-0 bg-najal-primary-dark/80"></div>
+    </div>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+    <!-- Contenido Centrado -->
+    <div class="relative z-10 flex flex-col items-center">
+      <h1 class="font-futura font-bold text-4xl md:text-6xl tracking-tight text-balance">
+        Sistema de Diseño Najal
+      </h1>
+      <p class="mt-4 text-lg md:text-xl text-najal-secondary-light max-w-2xl text-balance">
+        Explora diferentes implementaciones de landing pages construidas con nuestro sistema de componentes en Astro.
+      </p>
+
+      <!-- Botones de Navegación -->
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-2xl">
+        <NajalButton href="/landing-a" size="lg" variant="secondary">Landing A</NajalButton>
+        <NajalButton href="/landing-b" size="lg" variant="secondary">Landing B</NajalButton>
+        <NajalButton href="/landing-c" size="lg" variant="secondary">Landing C</NajalButton>
+      </div>
+
+      <div class="mt-4 w-full max-w-2xl">
+        <NajalButton href="/components-gallery" size="lg" variant="outline" className="w-full border-white text-white hover:bg-white hover:text-najal-primary">
+          Ver Galería de Componentes
+        </NajalButton>
+      </div>
+    </div>
+  </div>
+</Layout>

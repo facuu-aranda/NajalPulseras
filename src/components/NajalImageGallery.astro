@@ -1,0 +1,35 @@
+---
+// src/components/NajalImageGallery.astro
+import NajalHeading from '@/components/NajalHeading.astro';
+import NajalText from '@/components/NajalText.astro';
+import { Carousel } from '@/components/ui/Carousel.tsx';
+
+// Los datos ahora se definen aquí y se pasan como prop.
+// Las rutas apuntan a la carpeta /public
+const galleryImages = [
+  { id: "1", src: "/modern-office.png", alt: "Oficina moderna", title: "Diseño Innovador", description: "Espacios de trabajo que inspiran creatividad y colaboración." },
+  { id: "2", src: "/business-meeting-collaboration.png", alt: "Reunión de negocios", title: "Soluciones Elegantes", description: "Funcionalidad y estética unidas para potenciar tus proyectos." },
+  { id: "3", src: "/team-collaboration.png", alt: "Colaboración de equipo", title: "Colaboración Total", description: "Herramientas que facilitan la comunicación y el trabajo en equipo." },
+];
+---
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <NajalHeading level={2} variant="primary" className="mb-4">
+        Galería de Imágenes
+      </NajalHeading>
+      <NajalText size="lg" variant="light" className="max-w-2xl mx-auto">
+        Explora nuestros diseños y descubre la calidad en cada detalle.
+      </Text>
+    </div>
+    
+    <Carousel
+      client:visible
+      items={galleryImages}
+      opts={{
+        loop: true,
+        align: "start",
+      }}
+    />
+  </div>
+</section>

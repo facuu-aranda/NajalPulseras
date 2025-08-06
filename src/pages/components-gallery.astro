@@ -1,0 +1,131 @@
+---
+// src/pages/components-gallery.astro
+
+// 1. Importamos los componentes que vamos a usar
+import Layout from '@/layouts/Layout.astro';
+import NajalHeading from '@/components/NajalHeading.astro';
+import NajalText from '@/components/NajalText.astro';
+import NajalCard from '@/components/NajalCard.astro';
+import NajalCardHeader from '@/components/NajalCardHeader.astro';
+import NajalCardTitle from '@/components/NajalCardTitle.astro';
+import NajalCardContent from '@/components/NajalCardContent.astro';
+import NajalPatternBackground from '@/components/NajalPatternBackground.astro';
+import NajalButton from '@/components/NajalButton.astro';
+import NajalLogo from '@/components/NajalLogo.astro';
+import NajalImageGallery from '@/components/NajalImageGallery.astro';
+import NajalProductCarousel from '@/components/NajalProductCarousel.astro';
+import NajalHero from '@/components/NajalHero.astro'; // 
+const heroData = {
+  subtitle: "Lorem ipsum",
+  title: "Dolor sit amet consectetur adipiscing elit",
+  description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris.",
+  primaryCTA: { text: "Lorem ipsum", href: "#" },
+  secondaryCTA: { text: "Dolor sit amet", href: "#" }
+};
+import NajalAboutSection from '@/components/NajalAboutSection.astro';
+import NajalServicesSection from '@/components/NajalServicesSection.astro';
+import NajalTestimonialsSection from '@/components/NajalTestimonialsSection.astro';
+import NajalCTASection from '@/components/NajalCTASection.astro';
+---
+
+<Layout title="Galería de Componentes Najal">
+  <NajalHero
+    variant="dark"
+    subtitle={heroData.subtitle}
+    title={heroData.title}
+    description={heroData.description}
+    primaryCTA={heroData.primaryCTA}
+    secondaryCTA={heroData.secondaryCTA}
+  />
+  <main>
+    <section class="text-center p-8 md:p-16">
+      <NajalHeading level={1} variant="primary">
+        Galería de Componentes Najal
+      </NajalHeading>
+      <NajalText size="lg" variant="light" className="mt-4 max-w-2xl mx-auto">
+        Esta es una colección de los componentes de UI para Najal Pulseras, reconstruidos con Astro.
+      </NajalText>
+    </section>
+
+    <NajalPatternBackground variant="dark" opacity={0.05}>
+      <section class="py-16 px-8">
+        <NajalHeading level={2} variant="secondary" className="mb-8 text-center">
+          Tarjetas (Card)
+        </NajalHeading>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <NajalCard>
+            <NajalCardHeader>
+              <NajalCardTitle>Card Variante Default</NajalCardTitle>
+            </NajalCardHeader>
+            <NajalCardContent>
+              <NajalText variant="dark">
+                Este es el contenido de la tarjeta por defecto. Usa un fondo blanco y texto oscuro.
+              </NajalText>
+            </NajalCardContent>
+          </NajalCard>
+          <NajalCard variant="primary">
+            <NajalCardHeader>
+              <NajalCardTitle>Card Variante Primary</NajalCardTitle>
+            </NADajalCardHeader>
+            <NajalCardContent>
+              <p>
+                Este es el contenido de la tarjeta primaria. Usa el color principal de la marca.
+              </p>
+            </NajalCardContent>
+          </NajalCard>
+          <NajalCard variant="secondary">
+            <NajalCardHeader>
+              <NajalCardTitle>Card Variante Secondary</NajalCardTitle>
+            </NajalCardHeader>
+            <NajalCardContent>
+              <p>
+                Este es el contenido de la tarjeta secundaria. Usa el color secundario.
+              </p>
+            </NajalCardContent>
+          </NajalCard>
+        </div>
+      </section>
+      <section class="py-16 px-8">
+      <NajalHeading level={2} variant="secondary" className="mb-8 text-center">
+        Botones (Button)
+      </NajalHeading>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <NajalButton>Primary MD</NajalButton>
+
+        <NajalButton href="#" size="lg">Enlace LG</NajalButton>
+
+        <NajalButton variant="secondary" size="sm">Secondary SM</NajalButton>
+        <NajalButton variant="outline">Outline MD</NajalButton>
+        <NajalButton variant="ghost" size="lg">Ghost LG</NajalButton>
+
+        <NajalButton disabled>Disabled</NajalButton>
+      </div>
+    </section>
+    </NajalPatternBackground>
+    <NajalPatternBackground variant="light" opacity={0.05}>
+      <section class="py-16 px-8">
+        <NajalHeading level={2} variant="primary" className="mb-8 text-center">
+          Logo
+        </NajalHeading>
+
+        <div class="flex flex-wrap items-center justify-center gap-8 p-8 bg-white rounded-lg shadow-inner">
+          <NajalLogo size="sm" />
+          <NajalLogo size="md" />
+          <NajalLogo variant="icon" size="lg" />
+          <NajalLogo variant="text" size="xl" />
+          <div class="p-4 bg-najal-primary-dark rounded-md">
+            <NajalLogo theme="dark" />
+          </div>
+        </div>
+      </section>
+    </NajalPatternBackground>
+        <NajalImageGallery />
+    <NajalProductCarousel />
+    <NajalTestimonialsSection />
+    <NajalCTASection />
+    <NajalAboutSection variant="dark" />
+    <NajalServicesSection />
+  </main>
+</Layout>

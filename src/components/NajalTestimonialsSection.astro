@@ -1,0 +1,42 @@
+---
+import NajalCard from "@/components/NajalCard.astro";
+import NajalCardContent from "@/components/NajalCardContent.astro";
+import NajalHeading from "@/components/NajalHeading.astro";
+import NajalPatternBackground from "@/components/NajalPatternBackground.astro";
+import NajalText from "@/components/NajalText.astro";
+import { Icon } from "astro-icon/components";
+
+const testimonials = [
+    { quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.", author: "Lorem Ipsum", role: "CEO, Dolor Sit Amet", rating: 5 },
+    { quote: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.", author: "Consectetur Adipiscing", role: "CTO, Elit Sed Do", rating: 5 },
+    { quote: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", author: "Eiusmod Tempor", role: "Founder, Incididunt Ut", rating: 5 },
+];
+---
+<NajalPatternBackground variant="dark" className="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <NajalHeading level={2} variant="light" className="mb-4">Lorem ipsum dolor sit</NajalHeading>
+            <NajalText size="lg" variant="light" className="max-w-2xl mx-auto">Consectetur adipiscing elit sed do eiusmod tempor.</NajalText>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+                <NajalCard variant={index === 1 ? "primary" : "default"}>
+                    <NajalCardContent>
+                        <div class="flex mb-4">
+                            {Array(testimonial.rating).fill(0).map(() => (
+                                <Icon name="lucide:star" class="h-5 w-5 text-najal-secondary fill-current" />
+                            ))}
+                        </div>
+                        <p class:list={["mb-6 italic", index === 1 ? 'text-white' : 'text-najal-primary-dark']}>
+                            "{testimonial.quote}"
+                        </p>
+                        <div>
+                            <NajalText weight="bold" variant={index === 1 ? 'light' : 'dark'}>{testimonial.author}</NajalText>
+                            <NajalText size="sm" variant="light">{testimonial.role}</NajalText>
+                        </div>
+                    </NajalCardContent>
+                </NajalCard>
+            ))}
+        </div>
+    </div>
+</NajalPatternBackground>
