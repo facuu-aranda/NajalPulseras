@@ -9,6 +9,7 @@ interface Props {
 }
 const { title, className } = Astro.props;
 import { ClientRouter } from "astro:transitions";
+import Analytics from '@vercel/analytics/astro'
 ---
 <!doctype html>
 <html lang="es">
@@ -16,6 +17,7 @@ import { ClientRouter } from "astro:transitions";
 		<meta charset="UTF-8" />
 		<meta name="description" content="Najal Pulseras - Componentes y Diseños" />
 		  <ClientRouter  />
+      <Analytics />
     <meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
