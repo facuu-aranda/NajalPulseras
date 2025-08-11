@@ -1,17 +1,17 @@
 ---
 // src/components/NajalLogo.astro
-import { Image } from 'astro:assets'; // El componente optimizado de Astro
-import logoSrc from '@/assets/logoTipo.png'; // Importamos la imagen como si fuera un módulo
+import { Image } from 'astro:assets';
+import logoSrc from '@/assets/isoTipo.png';
 import { cn } from '@/lib/utils';
 
 interface Props {
   variant?: "full" | "icon" | "text";
   size?: "sm" | "md" | "lg" | "xl";
-  theme?: "light" | "dark" | "orange";
   className?: string;
+  // Eliminamos la prop 'theme'
 }
 
-const { variant = "full", size = "md", theme = "light", className = "" } = Astro.props;
+const { variant = "full", size = "md", className = "" } = Astro.props;
 
 const sizeClasses = {
   sm: "h-8",
@@ -27,10 +27,7 @@ const textSizeClasses = {
   xl: "text-5xl"
 };
 
-let themeColorClass = "text-najal-primary-dark";
-if (theme === 'dark' || theme === 'orange') {
-  themeColorClass = "text-white";
-}
+// Ya no necesitamos la lógica de 'themeColorClass'
 
 const finalContainerClasses = cn('inline-flex items-center gap-3', className);
 ---
@@ -45,7 +42,8 @@ const finalContainerClasses = cn('inline-flex items-center gap-3', className);
 {/* Variante de solo Texto */}
 {variant === 'text' && (
   <div class:list={[finalContainerClasses, 'gap-0']}>
-    <span class:list={['font-futura font-bold tracking-wider', textSizeClasses[size], themeColorClass]}>
+    {/* Usamos 'text-foreground' que cambia automáticamente con el tema */}
+    <span class:list={['font-futura font-bold tracking-wider text-foreground', textSizeClasses[size]]}>
       NAJAL
     </span>
   </div>
@@ -57,7 +55,8 @@ const finalContainerClasses = cn('inline-flex items-center gap-3', className);
     <div class:list={[sizeClasses[size], 'aspect-square relative']}>
       <Image src={logoSrc} alt="Najal Logo" class="h-full w-full object-contain" />
     </div>
-    <span class:list={['font-futura font-bold tracking-wider', textSizeClasses[size], themeColorClass]}>
+    {/* Usamos 'text-foreground' que cambia automáticamente con el tema */}
+    <span class:list={['font-futura font-bold tracking-wider text-foreground', textSizeClasses[size]]}>
       NAJAL
     </span>
   </div>

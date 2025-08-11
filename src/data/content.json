@@ -1,0 +1,104 @@
+{
+  "products": [
+    {
+      "id": "prod_01",
+      "name": "Brazalete de Obsidiana",
+      "description": "Protección y fuerza en una pieza de diseño audaz y masculino.",
+      "price": "$120.00",
+      "badge": "Más Vendido",
+      "recommendation": "Ideal para eventos nocturnos o para añadir un toque de misterio a tu look diario.",
+      "images": [
+        "/premium-product.png",
+        "/product-design-studio.png",
+        "/modern-product.png"
+      ],
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20el%20Brazalete%20de%20Obsidiana"
+    },
+    {
+      "id": "prod_02",
+      "name": "Pulsera de Cuarzo Rosa",
+      "description": "Una pulsera delicada que evoca calma y amor propio.",
+      "price": "$95.00",
+      "badge": "Nuevo",
+      "recommendation": "Perfecta para el día a día, combina genial con tonos pastel y neutros.",
+      "images": [
+        "/modern-product.png",
+        "/elegant-solution.png",
+        "/premium-product.png"
+      ],
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20la%20Pulsera%20de%20Cuarzo%20Rosa"
+    },
+    {
+      "id": "prod_03",
+      "name": "Conjunto Volcánico",
+      "description": "Energía pura de la tierra en tu muñeca. Un conjunto que no pasa desapercibido.",
+      "price": "$180.00",
+      "recommendation": "Llévala cuando necesites un extra de confianza. Genial para reuniones importantes.",
+      "images": [
+        "/innovative-design.png",
+        "/product-design-studio.png",
+        "/elegant-solution.png"
+      ],
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20el%20Conjunto%20Volcánico"
+    },
+    {
+      "id": "prod_04",
+      "name": "Conjunto Volcánico",
+      "description": "Energía pura de la tierra en tu muñeca. Un conjunto que no pasa desapercibido.",
+      "price": "$180.00",
+      "recommendation": "Llévala cuando necesites un extra de confianza. Genial para reuniones importantes.",
+      "images": [
+        "/innovative-design.png",
+        "/product-design-studio.png",
+        "/elegant-solution.png"
+      ],
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20el%20Conjunto%20Volcánico"
+    },
+    {
+      "id": "prod_05",
+      "name": "Conjunto Volcánico",
+      "description": "Energía pura de la tierra en tu muñeca. Un conjunto que no pasa desapercibido.",
+      "price": "$180.00",
+      "recommendation": "Llévala cuando necesites un extra de confianza. Genial para reuniones importantes.",
+      "images": [
+        "/innovative-design.png",
+        "/product-design-studio.png",
+        "/elegant-solution.png"
+      ],
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20el%20Conjunto%20Volcánico"
+    },
+    {
+      "id": "prod_06",
+      "name": "Conjunto Volcánico",
+      "description": "Energía pura de la tierra en tu muñeca. Un conjunto que no pasa desapercibido.",
+      "price": "$180.00",
+      "recommendation": "Llévala cuando necesites un extra de confianza. Genial para reuniones importantes.",
+      "images": [
+        "/innovative-design.png",
+        "/product-design-studio.png",
+        "/elegant-solution.png"
+      ],
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20el%20Conjunto%20Volcánico"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "La calidad es increíble y el diseño es súper original. Se ha convertido en mi accesorio favorito.",
+      "author": "Marcos López",
+      "role": "Cliente Verificado",
+      "rating": 5
+    },
+    {
+      "quote": "El envío fue rapidísimo y la presentación del producto es impecable. Se nota el cariño que le ponen.",
+      "author": "Sofía Gonzalez",
+      "role": "Cliente Verificada",
+      "rating": 5
+    },
+    {
+      "quote": "Compré un brazalete para un regalo y fue un éxito total. La atención al cliente es de primera.",
+      "author": "Javier Fernández",
+      "role": "Cliente Verificado",
+      "rating": 5
+    }
+  ]
+}

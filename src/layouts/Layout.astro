@@ -43,7 +43,5 @@ import Analytics from '@vercel/analytics/astro'
 	</head>
 	<body class={cn("bg-background font-futura antialiased", className)}>
 		<slot />
-    {/* 3. Añade la isla de React para el botón de tema */}
-		<ThemeToggle client:load />
 	</body>
 </html>

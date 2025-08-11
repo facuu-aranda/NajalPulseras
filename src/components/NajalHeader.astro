@@ -1,21 +1,25 @@
 ---
-// src/components/NajalHeader.astro
 import NajalLogo from '@/components/NajalLogo.astro';
 import NajalButton from '@/components/NajalButton.astro';
-import NajalHeaderMobile from './NajalHeaderMobile.tsx'; // Importamos el componente de React
+import NajalHeaderMobile from './NajalHeaderMobile.tsx';
+import ThemeToggle from './ThemeToggle.tsx';
 
-const navigation = [
-  { label: "Lorem", href: "#lorem" },
-  { label: "Ipsum", href: "#ipsum" },
-  { label: "Dolor", href: "#dolor" },
-];
+interface NavItem {
+  label: string;
+  href: string;
+}
+interface Props {
+  navigation?: NavItem[];
+}
+const { navigation = [] } = Astro.props;
+
 const ctaText = "Contacto";
-const ctaHref = "#contacto";
+const ctaHref = "#comprar";
 ---
-<header class="bg-white shadow-sm border-b border-najal-secondary-light/20 sticky top-0 z-50">
+<header class="bg-background shadow-sm border-b border-border/20 sticky top-0 z-50 transition-colors duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-20">
-      <a href="/">
+      <a href="#main">
         <NajalLogo size="sm" />
       </a>
 
@@ -23,17 +27,21 @@ const ctaHref = "#contacto";
         {navigation.map((item) => (
           <a
             href={item.href}
-            class="font-futura text-najal-primary-dark hover:text-najal-primary transition-colors"
+            class="font-futura text-foreground hover:text-najal-primary transition-colors"
           >
             {item.label}
           </a>
         ))}
       </nav>
 
-      <div class="hidden md:block">
+      {/* ANTES: <div class="flex items-center space-x-4  md:block"> */}
+      {/* AHORA: Contenedor correcto para escritorio */}
+      <div class="hidden md:flex items-center space-x-4">
+        <ThemeToggle client:load />
         <NajalButton href={ctaHref}>{ctaText}</NajalButton>
       </div>
 
+      {/* El menú móvil se mantiene igual */}
       <div class="md:hidden">
         <NajalHeaderMobile 
           client:load
