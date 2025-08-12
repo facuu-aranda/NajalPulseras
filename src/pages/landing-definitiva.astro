@@ -8,6 +8,28 @@ import NajalHeading from '@/components/NajalHeading.astro';
 import ProductSection from '@/components/ProductSection.tsx';
 import content from '@/data/content.json';
 
+// Importa dinámicamente todas las imágenes de la carpeta de assets de productos
+const allImages = await Astro.glob('../assets/Productos/**/*.jpeg');
+const allJpgImages = await Astro.glob('../assets/Productos/**/*.jpg');
+const allPngImages = await Astro.glob('../assets/Productos/**/*.PNG');
+const combinedImages = [...allImages, ...allJpgImages, ...allPngImages];
+
+function findImage(path: string) {
+  const imageName = path.split('/').pop(); 
+  const image = combinedImages.find(img => img.default.src.endsWith(imageName));
+  if (!image) {
+    // Devuelve un objeto de imagen de placeholder si no se encuentra
+    console.warn(`Imagen no encontrada en src/assets: ${path}. Usando placeholder.`);
+    return { src: `https://placehold.co/600x400/2b2a28/ffffff?text=Imagen+no+encontrada`, width: 600, height: 400, format: 'png' };
+  }
+  return image.default;
+}
+
+const processedProducts = content.products.map(product => ({
+  ...product,
+  images: product.images.map(imgPath => findImage(imgPath))
+}));
+
 const navItems = [
   { label: "Productos", href: "#productos" },
   { label: "Opiniones", href: "#opiniones" },
@@ -16,7 +38,6 @@ const navItems = [
 ---
 <Layout title="Najal Pulseras - Landing Definitiva">
   <NajalHeader navigation={navItems} />
-
   <main>
     <NajalHero
       variant="dark"
@@ -32,7 +53,7 @@ const navItems = [
         <div class="text-center mb-12">
             <NajalHeading level={2} variant="primary">Nuestros Productos</NajalHeading>
         </div>
-        <ProductSection client:load products={content.products} />
+        <ProductSection client:load products={processedProducts} />
       </div>
     </section>
 

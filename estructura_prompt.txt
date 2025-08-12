@@ -1,0 +1,126 @@
+# Prompt para modelo de inteligencia artificial
+
+Estoy trabajando en el siguiente proyecto:
+
+📌 **Descripción del proyecto:**  
+Landing page Najal
+
+📂 **Estructura del proyecto:**  
+- 📁 najal-pulseras-landing-page
+  - 📄 astro.config.mjs
+  - 📄 package-lock.json
+  - 📄 package.json
+  - 📄 postcss.config.cjs
+  - 📄 README.md
+  - 📄 tailwind.config.cjs
+  - 📄 tsconfig.json
+  - 📁 .astro
+    - 📄 content-assets.mjs
+    - 📄 content-modules.mjs
+    - 📄 content.d.ts
+    - 📄 data-store.json
+    - 📄 settings.json
+    - 📄 types.d.ts
+    - 📁 collections
+  - 📁 public
+    - 📄 business-meeting-collaboration.png
+    - 📄 creative-workspace.png
+    - 📄 elegant-solution.png
+    - 📄 favicon.svg
+    - 📄 innovative-design.png
+    - 📄 modern-office.png
+    - 📄 modern-product.png
+    - 📄 najal-pattern.png
+    - 📄 premium-product.png
+    - 📄 product-design-studio.png
+    - 📄 team-collaboration.png
+  - 📁 src
+    - 📁 assets
+      - 📄 header-image.jpg
+      - 📄 isoTipo.png
+      - 📄 logoTipo.png
+      - 📁 Productos
+        - 📁 Entradas
+          - 📄 Entrada.jpeg
+        - 📁 Glitter
+          - 📄 Glitter (1).jpg
+          - 📄 Glitter (2).jpg
+          - 📄 Glitter (3).jpg
+          - 📄 Glitter (4).jpg
+          - 📄 Glitter.jpeg
+        - 📁 Holográficas
+          - 📄 Holograficas-CasoDeUso.PNG
+          - 📄 Holograficas-Colors.jpg
+        - 📁 Porta Credenciales
+          - 📄 PortaCredenciales (1).jpg
+          - 📄 PortaCredenciales (2).jpg
+          - 📄 PortaCredenciales-CasoDeUso.PNG
+          - 📄 PortaCredenciales.jpeg
+        - 📁 PVC
+          - 📄 PVC-Colors.jpg
+          - 📄 PVC.jpeg
+          - 📄 PVC_CasoDeUso.PNG
+        - 📁 Tela
+          - 📄 Tela (1).jpeg
+          - 📄 Tela (2).jpeg
+          - 📄 Tela (2).jpg
+          - 📄 Tela-CasoDeUso.PNG
+          - 📄 Tela.jpg
+        - 📁 Tyvek
+          - 📄 Tyvek-CasoDeUso.PNG
+          - 📄 Tyvek-Colors.jpg
+          - 📄 Tyvek.jpeg
+        - 📁 Vasos
+          - 📄 Vaso-CasoDeUso.jpg
+          - 📄 Vaso-Colors.jpg
+          - 📄 Vaso.jpg
+          - 📄 VasoTermico.jpg
+        - 📁 Vinilo
+          - 📄 Vinilo.jpeg
+    - 📁 components
+      - 📄 NajalAboutSection.astro
+      - 📄 NajalButton.astro
+      - 📄 NajalCard.astro
+      - 📄 NajalCardContent.astro
+      - 📄 NajalCardHeader.astro
+      - 📄 NajalCardTitle.astro
+      - 📄 NajalCTASection.astro
+      - 📄 NajalHeader.astro
+      - 📄 NajalHeaderMobile.tsx
+      - 📄 NajalHeading.astro
+      - 📄 NajalHero.astro
+      - 📄 NajalImageGallery.astro
+      - 📄 NajalLogo.astro
+      - 📄 NajalPatternBackground.astro
+      - 📄 NajalProductCarousel.astro
+      - 📄 NajalServicesSection.astro
+      - 📄 NajalTestimonialsSection.astro
+      - 📄 NajalText.astro
+      - 📄 ProductModal.tsx
+      - 📄 ProductSection.tsx
+      - 📄 ThemeToggle.tsx
+      - 📁 ui
+        - 📄 Badge.tsx
+        - 📄 Carousel.tsx
+        - 📄 ProductCarousel.tsx
+    - 📁 data
+      - 📄 content.json
+    - 📁 layouts
+      - 📄 Layout.astro
+    - 📁 lib
+      - 📄 utils.ts
+    - 📁 pages
+      - 📄 blog.astro
+      - 📄 coleccion.astro
+      - 📄 components-gallery.astro
+      - 📄 index.astro
+      - 📄 landing-a.astro
+      - 📄 landing-b.astro
+      - 📄 landing-c.astro
+      - 📄 landing-definitiva.astro
+    - 📁 styles
+      - 📄 global.css
+
+Quiero que me vayas pidiendo todos los archivos del proyecto uno por uno para que los puedas guardar en tu contexto. Una vez los tengas, podremos comenzar a trabajar sobre ellos con mayor precisión.
+
+Por favor, indicá cuál archivo necesitás primero.
