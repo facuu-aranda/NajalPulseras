@@ -8,6 +8,24 @@ import NajalHeading from '@/components/NajalHeading.astro';
 import ProductSection from '@/components/ProductSection.tsx';
 import content from '@/data/content.json';
 
+const imageModules = import.meta.glob('/src/assets/Productos/**/*.{jpeg,jpg,PNG,png}');
+
+const processedProducts = await Promise.all(content.products.map(async (product) => {
+  const resolvedImages = await Promise.all(product.images.map(async (imgPath) => {
+    const fullPath = `/src/assets${imgPath}`;
+    
+    if (imageModules[fullPath]) {
+      const module = await imageModules[fullPath]();
+      return module.default; 
+    }
+    
+    console.warn(`Imagen no encontrada en src/assets: ${imgPath}. Usando placeholder.`);
+    return { src: `https://placehold.co/600x400/2b2a28/ffffff?text=No+Encontrada`, width: 600, height: 400, format: 'png' };
+  }));
+  
+  return { ...product, images: resolvedImages };
+}));
+
 const navItems = [
   { label: "Productos", href: "#productos" },
   { label: "Opiniones", href: "#opiniones" },
@@ -16,10 +34,8 @@ const navItems = [
 ---
 <Layout title="Najal Pulseras - Landing Definitiva">
   <NajalHeader navigation={navItems} />
-
   <main>
-    <div id="main">
-      <NajalHero
+    <NajalHero
       variant="dark"
       subtitle="Diseños que Conectan"
       title="Potencia tu Estilo con Piezas Únicas"
@@ -27,14 +43,13 @@ const navItems = [
       primaryCTA={{ text: "Ver Productos", href: "#productos" }}
       secondaryCTA={{ text: "Contáctanos", href: "#comprar" }}
     />
-    </div>
     
     <section id="productos" class="py-20 bg-background transition-colors duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <NajalHeading level={2} variant="primary">Nuestros Productos</NajalHeading>
         </div>
-        <ProductSection client:load products={content.products} />
+        <ProductSection client:load products={processedProducts} />
       </div>
     </section>
 

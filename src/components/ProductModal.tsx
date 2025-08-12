@@ -1,27 +1,29 @@
-import { useEffect, useCallback, useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
+
+type AstroImage = {
+  src: string;
+};
 
 type Product = {
   name: string;
   description: string;
   recommendation: string;
-  images: string[];
+  images: AstroImage[];
   quoteUrl: string;
 };
 
 interface ProductModalProps {
-  product: Product; // Ya no puede ser null, el padre se encarga de eso
+  product: Product;
   onClose: () => void;
 }
 
 export default function ProductModal({ product, onClose }: ProductModalProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleClose = useCallback(() => {
-    onClose();
-  }, [onClose]);
+  const handleClose = useCallback(() => onClose(), [onClose]);
 
   const nextImage = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % product.images.length);
@@ -79,9 +81,9 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
               <AnimatePresence mode="wait">
                 <motion.img
                   key={currentIndex}
-                  src={product.images[currentIndex]}
+                  src={product.images[currentIndex].src}
                   alt={`${product.name} - vista ${currentIndex + 1}`}
-                  className="absolute top-0  left-0 w-full h-full object-cover"
+                  className="absolute top-0 left-0 w-full h-full object-cover"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}

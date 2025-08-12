@@ -3,7 +3,7 @@
 Estoy trabajando en el siguiente proyecto:
 
 📌 **Descripción del proyecto:**  
-Landing page Najal
+
 
 📂 **Estructura del proyecto:**  
 - 📁 najal-pulseras-landing-page
@@ -23,17 +23,13 @@ Landing page Najal
     - 📄 types.d.ts
     - 📁 collections
   - 📁 public
-    - 📄 business-meeting-collaboration.png
-    - 📄 creative-workspace.png
-    - 📄 elegant-solution.png
-    - 📄 favicon.svg
-    - 📄 innovative-design.png
-    - 📄 modern-office.png
-    - 📄 modern-product.png
+    - 📄 android-chrome-192x192.png
+    - 📄 android-chrome-512x512.png
+    - 📄 apple-touch-icon.png
+    - 📄 favicon-16x16.png
+    - 📄 favicon-32x32.png
+    - 📄 favicon.ico
     - 📄 najal-pattern.png
-    - 📄 premium-product.png
-    - 📄 product-design-studio.png
-    - 📄 team-collaboration.png
   - 📁 src
     - 📁 assets
       - 📄 header-image.jpg
@@ -110,14 +106,8 @@ Landing page Najal
     - 📁 lib
       - 📄 utils.ts
     - 📁 pages
-      - 📄 blog.astro
-      - 📄 coleccion.astro
       - 📄 components-gallery.astro
       - 📄 index.astro
-      - 📄 landing-a.astro
-      - 📄 landing-b.astro
-      - 📄 landing-c.astro
-      - 📄 landing-definitiva.astro
     - 📁 styles
       - 📄 global.css
 

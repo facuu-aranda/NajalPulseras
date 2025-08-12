@@ -1,84 +1,87 @@
 {
   "products": [
     {
-      "id": "prod_01",
-      "name": "Brazalete de Obsidiana",
-      "description": "Protección y fuerza en una pieza de diseño audaz y masculino.",
-      "price": "$120.00",
-      "badge": "Más Vendido",
-      "recommendation": "Ideal para eventos nocturnos o para añadir un toque de misterio a tu look diario.",
+      "id": "prod_glitter",
+      "name": "Pulseras Glitter",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": "$150.00",
+      "badge": "Brillante",
+      "recommendation": "Perfectas para festivales y eventos nocturnos donde quieras destacar.",
       "images": [
-        "/premium-product.png",
-        "/product-design-studio.png",
-        "/modern-product.png"
+        "/Productos/Glitter/Glitter.jpeg",
+        "/Productos/Glitter/Glitter (1).jpg",
+        "/Productos/Glitter/Glitter (2).jpg",
+        "/Productos/Glitter/Glitter (3).jpg"
       ],
-      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20el%20Brazalete%20de%20Obsidiana"
+      "quoteUrl": "https://wa.me/+5493564575862?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Glitter"
     },
     {
-      "id": "prod_02",
-      "name": "Pulsera de Cuarzo Rosa",
-      "description": "Una pulsera delicada que evoca calma y amor propio.",
-      "price": "$95.00",
+      "id": "prod_holograficas",
+      "name": "Pulseras Holográficas",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "price": "$180.00",
       "badge": "Nuevo",
-      "recommendation": "Perfecta para el día a día, combina genial con tonos pastel y neutros.",
+      "recommendation": "Un toque futurista y llamativo para cualquier ocasión especial.",
       "images": [
-        "/modern-product.png",
-        "/elegant-solution.png",
-        "/premium-product.png"
+        "/Productos/Holográficas/Holograficas-Colors.jpg",
+        "/Productos/Holográficas/Holograficas-CasoDeUso.PNG"
       ],
-      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20la%20Pulsera%20de%20Cuarzo%20Rosa"
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Holográficas"
     },
     {
-      "id": "prod_03",
-      "name": "Conjunto Volcánico",
-      "description": "Energía pura de la tierra en tu muñeca. Un conjunto que no pasa desapercibido.",
-      "price": "$180.00",
-      "recommendation": "Llévala cuando necesites un extra de confianza. Genial para reuniones importantes.",
+      "id": "prod_tela",
+      "name": "Pulseras de Tela",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "price": "$250.00",
+      "badge": "Más Vendido",
+      "recommendation": "Ideales para eventos corporativos, festivales y como recuerdo duradero.",
       "images": [
-        "/innovative-design.png",
-        "/product-design-studio.png",
-        "/elegant-solution.png"
+        "/Productos/Tela/Tela.jpg",
+        "/Productos/Tela/Tela (1).jpeg",
+        "/Productos/Tela/Tela (2).jpeg",
+        "/Productos/Tela/Tela-CasoDeUso.PNG"
       ],
-      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20el%20Conjunto%20Volcánico"
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20Tela"
     },
     {
-      "id": "prod_04",
-      "name": "Conjunto Volcánico",
-      "description": "Energía pura de la tierra en tu muñeca. Un conjunto que no pasa desapercibido.",
-      "price": "$180.00",
-      "recommendation": "Llévala cuando necesites un extra de confianza. Genial para reuniones importantes.",
+      "id": "prod_pvc",
+      "name": "Pulseras de PVC",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "price": "$120.00",
+      "recommendation": "Resistentes y seguras, la opción perfecta para control de acceso en eventos.",
       "images": [
-        "/innovative-design.png",
-        "/product-design-studio.png",
-        "/elegant-solution.png"
+        "/Productos/PVC/PVC.jpeg",
+        "/Productos/PVC/PVC-Colors.jpg",
+        "/Productos/PVC/PVC_CasoDeUso.PNG"
       ],
-      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20el%20Conjunto%20Volcánico"
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20PVC"
     },
     {
-      "id": "prod_05",
-      "name": "Conjunto Volcánico",
-      "description": "Energía pura de la tierra en tu muñeca. Un conjunto que no pasa desapercibido.",
-      "price": "$180.00",
-      "recommendation": "Llévala cuando necesites un extra de confianza. Genial para reuniones importantes.",
+      "id": "prod_tyvek",
+      "name": "Pulseras Tyvek",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": "$90.00",
+      "recommendation": "Económicas e intransferibles, perfectas para eventos de un solo día.",
       "images": [
-        "/innovative-design.png",
-        "/product-design-studio.png",
-        "/elegant-solution.png"
+        "/Productos/Tyvek/Tyvek.jpeg",
+        "/Productos/Tyvek/Tyvek-Colors.jpg",
+        "/Productos/Tyvek/Tyvek-CasoDeUso.PNG"
       ],
-      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20el%20Conjunto%20Volcánico"
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Tyvek"
     },
     {
-      "id": "prod_06",
-      "name": "Conjunto Volcánico",
-      "description": "Energía pura de la tierra en tu muñeca. Un conjunto que no pasa desapercibido.",
-      "price": "$180.00",
-      "recommendation": "Llévala cuando necesites un extra de confianza. Genial para reuniones importantes.",
+      "id": "prod_vasos",
+      "name": "Vasos Personalizados",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "price": "$300.00",
+      "badge": "Pack Fiesta",
+      "recommendation": "El complemento ideal para tus eventos, con diseños que no se borran.",
       "images": [
-        "/innovative-design.png",
-        "/product-design-studio.png",
-        "/elegant-solution.png"
+        "/Productos/Vasos/Vaso.jpg",
+        "/Productos/Vasos/Vaso-Colors.jpg",
+        "/Productos/Vasos/Vaso-CasoDeUso.jpg"
       ],
-      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20el%20Conjunto%20Volcánico"
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Vasos%20Personalizados"
     }
   ],
   "testimonials": [
@@ -99,6 +102,43 @@
       "author": "Javier Fernández",
       "role": "Cliente Verificado",
       "rating": 5
+    }
+  ],
+  "services": [
+    {
+      "title": "Diseño Personalizado",
+      "description": "Creamos diseños únicos desde cero para que tu marca o evento tenga una identidad inigualable.",
+      "features": ["Asesoramiento creativo", "Revisiones ilimitadas", "Adaptado a tu marca"]
+    },
+    {
+      "title": "Producción Rápida",
+      "description": "Entendemos tus tiempos. Ofrecemos producción express para que tengas tus pulseras justo cuando las necesitas.",
+      "features": ["Entregas en tiempo récord", "Calidad garantizada", "Seguimiento de producción"]
+    },
+    {
+      "title": "Envíos a todo el país",
+      "description": "No importa dónde sea tu evento, nosotros nos encargamos de que tus productos lleguen a destino.",
+      "features": ["Logística segura", "Cobertura nacional", "Múltiples opciones de envío"]
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/Productos/Tela/Tela-CasoDeUso.PNG",
+      "alt": "Pulseras de tela en un festival",
+      "title": "Diseño Innovador",
+      "description": "Espacios de trabajo que inspiran creatividad y colaboración."
+    },
+    {
+      "src": "/Productos/Tyvek/Tyvek-CasoDeUso.PNG",
+      "alt": "Pulseras tyvek para control de acceso",
+      "title": "Soluciones Elegantes",
+      "description": "Funcionalidad y estética unidas para potenciar tus proyectos."
+    },
+    {
+      "src": "/Productos/Vasos/Vaso-CasoDeUso.jpg",
+      "alt": "Vasos personalizados en una fiesta",
+      "title": "Colaboración Total",
+      "description": "Herramientas que facilitan la comunicación y el trabajo en equipo."
     }
   ]
 }

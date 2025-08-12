@@ -6,6 +6,14 @@ import { cn } from '@/lib/utils';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
+// El tipo de imagen que Astro nos pasará
+type AstroImage = {
+  src: string;
+  width: number;
+  height: number;
+  format: string;
+};
+
 type Product = {
   id: string;
   name: string;
@@ -13,7 +21,7 @@ type Product = {
   price: string;
   badge?: string;
   recommendation: string;
-  images: string[];
+  images: AstroImage[]; 
   quoteUrl: string;
 };
 
@@ -31,16 +39,20 @@ export default function ProductSection({ products }: ProductSectionProps) {
   const openModal = (product: Product) => setSelectedProduct(product);
   const closeModal = () => setSelectedProduct(null);
 
-  return (
+   return (
     <>
       <div className="relative group">
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex -ml-4">
+        <div className="overflow-hidden py-4 px-4" ref={emblaRef}>
+          <div className="flex -ml-4 -my-4">
             {products.map((product) => (
-              <div key={product.id} className="pl-4 min-w-0 shrink-0 grow-0 basis-full md:basis-1/2 lg:basis-1/3">
-                <div onClick={() => openModal(product)} className="cursor-pointer group/card">
+              <div key={product.id} className="pl-4 py-4 min-w-0 shrink-0 grow-0 basis-full md:basis-1/2 lg:basis-1/3">
+                <div onClick={() => openModal(product)} className="cursor-pointer group/card transition-transform duration-300 hover:scale-105">
                   <div className="relative overflow-hidden rounded-lg">
-                    <img src={product.images[0]} alt={product.name} className="w-full h-72 object-cover rounded-lg transition-transform duration-300 group-hover/card:scale-105" />
+                    <img 
+                      src={product.images[0].src} 
+                      alt={product.name} 
+                      className="w-full h-72 object-cover rounded-lg" 
+                    />
                     {product.badge && (
                       <Badge variant="secondary" className="absolute top-4 left-4">{product.badge}</Badge>
                     )}
@@ -59,7 +71,6 @@ export default function ProductSection({ products }: ProductSectionProps) {
         <CarouselButton className="right-0" onClick={scrollNext}><ArrowRight className="h-4 w-4" /></CarouselButton>
       </div>
 
-      {/* LA CLAVE ESTÁ AQUÍ: AnimatePresence envuelve el modal */}
       <AnimatePresence>
         {selectedProduct && (
           <ProductModal product={selectedProduct} onClose={closeModal} />
