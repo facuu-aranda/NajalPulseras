@@ -12,5 +12,14 @@ export default defineConfig({
     }), 
     react(),
     icon()
-  ]
+  ],
+  // --- CAMBIO: Añade este bloque de configuración de Vite ---
+  vite: {
+    build: {
+      cssCodeSplit: true, // Asegúrate de que esto esté activado
+    },
+    experimental: {
+      inlineCriticalCss: true,
+    },
+  },
 });
