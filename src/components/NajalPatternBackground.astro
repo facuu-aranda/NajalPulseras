@@ -1,6 +1,10 @@
 ---
-// src/components/NajalPatternBackground.astro
+// src/components/NajalPatternBackground.astro (ACTUALIZADO)
+
 import { cn } from '@/lib/utils';
+// --- CAMBIO 1: Importamos getImage y la imagen directamente desde assets ---
+import { getImage } from 'astro:assets';
+import najalPattern from '@/assets/najal-pattern.png';
 
 interface Props {
   variant?: "light" | "dark" | "primary";
@@ -10,16 +14,26 @@ interface Props {
 
 const { variant = "light", opacity = 0.1, className } = Astro.props;
 
+// --- CAMBIO 2: Procesamos la imagen para optimizarla ---
+// La convertimos a WebP, que es mucho más ligera, y ajustamos la calidad.
+const optimizedPattern = await getImage({
+  src: najalPattern,
+  format: 'webp',
+  quality: 75,
+});
+
 const variantClasses = {
-  light: "bg-gray-50",
+  light: "bg-gray-50 dark:bg-zinc-900", // Mejoramos el color para modo claro/oscuro
   dark: "bg-najal-primary-dark",
   primary: "bg-najal-primary"
 };
 
 const finalClasses = cn("relative", variantClasses[variant], className);
 
+// --- CAMBIO 3: Usamos la URL de la imagen optimizada ---
+// La variable `optimizedPattern.src` contendrá la ruta a la imagen .webp procesada.
 const patternStyle = `
-  background-image: url('/najal-pattern.png');
+  background-image: url('${optimizedPattern.src}');
   background-size: 120dvw;
   opacity: ${opacity};
 `;
