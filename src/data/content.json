@@ -8,10 +8,10 @@
       "badge": "Brillante",
       "recommendation": "Perfectas para festivales y eventos nocturnos donde quieras destacar.",
       "images": [
-        "/Productos/Glitter/Glitter.webp",
-        "/Productos/Glitter/Glitter (1).webp",
-        "/Productos/Glitter/Glitter (2).webp",
-        "/Productos/Glitter/Glitter (3).webp"
+        "/Productos/Glitter/Glitter.jpeg",
+        "/Productos/Glitter/Glitter (1).jpg",
+        "/Productos/Glitter/Glitter (2).jpg",
+        "/Productos/Glitter/Glitter (3).jpg"
       ],
       "quoteUrl": "https://wa.me/+5493564575862?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Glitter"
     },
@@ -23,8 +23,8 @@
       "badge": "Nuevo",
       "recommendation": "Un toque futurista y llamativo para cualquier ocasión especial.",
       "images": [
-        "/Productos/Holográficas/Holograficas-Colors.webp",
-        "/Productos/Holográficas/Holograficas-CasoDeUso.webp"
+        "/Productos/Holográficas/Holograficas-Colors.jpg",
+        "/Productos/Holográficas/Holograficas-CasoDeUso.PNG"
       ],
       "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Holográficas"
     },
@@ -36,10 +36,10 @@
       "badge": "Más Vendido",
       "recommendation": "Ideales para eventos corporativos, festivales y como recuerdo duradero.",
       "images": [
-        "/Productos/Tela/Tela.webp",
-        "/Productos/Tela/Tela (1).webp",
-        "/Productos/Tela/Tela (2).webp",
-        "/Productos/Tela/Tela-CasoDeUso.webp"
+        "/Productos/Tela/Tela.jpg",
+        "/Productos/Tela/Tela (1).jpeg",
+        "/Productos/Tela/Tela (2).jpeg",
+        "/Productos/Tela/Tela-CasoDeUso.PNG"
       ],
       "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20Tela"
     },
@@ -50,9 +50,9 @@
       "price": "$120.00",
       "recommendation": "Resistentes y seguras, la opción perfecta para control de acceso en eventos.",
       "images": [
-        "/Productos/PVC/PVC.webp",
-        "/Productos/PVC/PVC-Colors.webp",
-        "/Productos/PVC/PVC_CasoDeUso.webp"
+        "/Productos/PVC/PVC.jpeg",
+        "/Productos/PVC/PVC-Colors.jpg",
+        "/Productos/PVC/PVC_CasoDeUso.PNG"
       ],
       "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20PVC"
     },
@@ -63,9 +63,9 @@
       "price": "$90.00",
       "recommendation": "Económicas e intransferibles, perfectas para eventos de un solo día.",
       "images": [
-        "/Productos/Tyvek/Tyvek.webp",
-        "/Productos/Tyvek/Tyvek-Colors.webp",
-        "/Productos/Tyvek/Tyvek-CasoDeUso.webp"
+        "/Productos/Tyvek/Tyvek.jpeg",
+        "/Productos/Tyvek/Tyvek-Colors.jpg",
+        "/Productos/Tyvek/Tyvek-CasoDeUso.PNG"
       ],
       "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Tyvek"
     },
@@ -77,9 +77,9 @@
       "badge": "Pack Fiesta",
       "recommendation": "El complemento ideal para tus eventos, con diseños que no se borran.",
       "images": [
-        "/Productos/Vasos/Vaso.webp",
-        "/Productos/Vasos/Vaso-Colors.webp",
-        "/Productos/Vasos/Vaso-CasoDeUso.webp"
+        "/Productos/Vasos/Vaso.jpg",
+        "/Productos/Vasos/Vaso-Colors.jpg",
+        "/Productos/Vasos/Vaso-CasoDeUso.jpg"
       ],
       "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Vasos%20Personalizados"
     }
@@ -123,19 +123,19 @@
   ],
   "galleryImages": [
     {
-      "src": "/Productos/Tela/Tela-CasoDeUso.webp",
+      "src": "/Productos/Tela/Tela-CasoDeUso.PNG",
       "alt": "Pulseras de tela en un festival",
       "title": "Diseño Innovador",
       "description": "Espacios de trabajo que inspiran creatividad y colaboración."
     },
     {
-      "src": "/Productos/Tyvek/Tyvek-CasoDeUso.webp",
+      "src": "/Productos/Tyvek/Tyvek-CasoDeUso.PNG",
       "alt": "Pulseras tyvek para control de acceso",
       "title": "Soluciones Elegantes",
       "description": "Funcionalidad y estética unidas para potenciar tus proyectos."
     },
     {
-      "src": "/Productos/Vasos/Vaso-CasoDeUso.webp",
+      "src": "/Productos/Vasos/Vaso-CasoDeUso.jpg",
       "alt": "Vasos personalizados en una fiesta",
       "title": "Colaboración Total",
       "description": "Herramientas que facilitan la comunicación y el trabajo en equipo."

@@ -1,21 +1,16 @@
 ---
-// src/pages/index.astro (ACTUALIZADO)
-
 import Layout from '@/layouts/Layout.astro';
 import NajalHeader from '@/components/NajalHeader.astro';
 import NajalHero from '@/components/NajalHero.astro';
 import NajalTestimonialsSection from '@/components/NajalTestimonialsSection.astro';
 import NajalCTASection from '@/components/NajalCTASection.astro';
 import NajalHeading from '@/components/NajalHeading.astro';
-// --- CAMBIO 1: Importamos el nuevo componente de Astro ---
 import ProductSection from '@/components/ProductSection.astro'; 
 import content from '@/data/content.json';
 import { getImage } from 'astro:assets'; // Mantenemos getImage para otros usos si es necesario
 
 const imageModules = import.meta.glob('/src/assets/Productos/**/*.{jpeg,jpg,PNG,png}');
 
-// --- CAMBIO 2: La lógica de procesamiento de productos se simplifica ---
-// Ahora solo necesitamos resolver las rutas de las imágenes, el componente se encargará de optimizarlas.
 const processedProducts = await Promise.all(content.products.map(async (product) => {
   const resolvedImages = await Promise.all(product.images.map(async (imgPath) => {
     const fullPath = `/src/assets${imgPath}`;
