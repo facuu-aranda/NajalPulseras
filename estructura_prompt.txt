@@ -3,7 +3,7 @@
 Estoy trabajando en el siguiente proyecto:
 
 📌 **Descripción del proyecto:**  
-
+sad
 
 📂 **Estructura del proyecto:**  
 - 📁 najal-pulseras-landing-page
@@ -32,9 +32,9 @@ Estoy trabajando en el siguiente proyecto:
     - 📄 najal-pattern.png
   - 📁 src
     - 📁 assets
-      - 📄 header-image.jpg
       - 📄 isoTipo.png
       - 📄 logoTipo.png
+      - 📄 najal-pattern.png
       - 📁 Productos
         - 📁 Entradas
           - 📄 Entrada.jpeg

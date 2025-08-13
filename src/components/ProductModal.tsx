@@ -67,8 +67,10 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
         exit={{ scale: 0.95, y: 20 }}
         transition={{ duration: 0.2 }}
       >
+        {/* --- CAMBIO 1: Añadimos aria-label al botón de cerrar --- */}
         <button
           onClick={handleClose}
+          aria-label="Cerrar modal"
           className="absolute -top-3 -right-3 z-10 p-1 bg-najal-primary text-white rounded-full shadow-lg"
         >
           <X size={20} />
@@ -90,8 +92,9 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                   transition={{ duration: 0.14 }}
                 />
               </AnimatePresence>
-              <button onClick={prevImage} className="absolute left-2 top-1/2 -translate-y-1/2 p-1 bg-white/50 rounded-full text-foreground"><ChevronLeft size={24}/></button>
-              <button onClick={nextImage} className="absolute right-2 top-1/2 -translate-y-1/2 p-1 bg-white/50 rounded-full text-foreground"><ChevronRight size={24}/></button>
+              {/* --- CAMBIO 2: Añadimos aria-label a los botones de navegación de imágenes --- */}
+              <button onClick={prevImage} aria-label="Imagen anterior" className="absolute left-2 top-1/2 -translate-y-1/2 p-1 bg-white/50 rounded-full text-foreground"><ChevronLeft size={24}/></button>
+              <button onClick={nextImage} aria-label="Siguiente imagen" className="absolute right-2 top-1/2 -translate-y-1/2 p-1 bg-white/50 rounded-full text-foreground"><ChevronRight size={24}/></button>
             </div>
           </div>
 

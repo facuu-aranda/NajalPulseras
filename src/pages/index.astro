@@ -1,4 +1,5 @@
 ---
+import { getImage } from 'astro:assets';
 import Layout from '@/layouts/Layout.astro';
 import NajalHeader from '@/components/NajalHeader.astro';
 import NajalHero from '@/components/NajalHero.astro';
@@ -16,7 +17,15 @@ const processedProducts = await Promise.all(content.products.map(async (product)
     
     if (imageModules[fullPath]) {
       const module = await imageModules[fullPath]();
-      return module.default; 
+      
+      const optimizedImage = await getImage({
+        src: module.default,
+        width: 800,       
+        height: 800,      
+        format: 'webp',   
+        quality: 85,      
+      });
+      return optimizedImage;
     }
     
     console.warn(`Imagen no encontrada en src/assets: ${imgPath}. Usando placeholder.`);
@@ -35,6 +44,7 @@ const navItems = [
 <Layout title="Najal Pulseras - Landing Definitiva">
   <NajalHeader navigation={navItems} />
   <main>
+    <div id="Home">
     <NajalHero
       variant="dark"
       subtitle="Diseños que Conectan"
@@ -42,17 +52,20 @@ const navItems = [
       description="Creamos pulseras y accesorios memorables que conectan con tu esencia y generan admiración."
       primaryCTA={{ text: "Ver Productos", href: "#productos" }}
       secondaryCTA={{ text: "Contáctanos", href: "#comprar" }}
-    />
+    /><div />
     
     <section id="productos" class="py-20 bg-background transition-colors duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <NajalHeading level={2} variant="primary">Nuestros Productos</NajalHeading>
         </div>
-        <ProductSection client:load products={processedProducts} />
+
+        <ProductSection client:visible products={processedProducts} />
+
       </div>
     </section>
 
+ 
     <div id="opiniones">
       <NajalTestimonialsSection testimonials={content.testimonials} />
     </div>

@@ -1,40 +1,37 @@
 ---
+// src/layouts/Layout.astro
+
 import '@/styles/global.css';
 import { cn } from '@/lib/utils';
-import ThemeToggle from '@/components/ThemeToggle.tsx'; // 1. Importa el nuevo componente
+import { ClientRouter } from "astro:transitions";
+import Analytics from '@vercel/analytics/astro'
 
 interface Props {
 	title: string;
     className?: string;
 }
 const { title, className } = Astro.props;
-import { ClientRouter } from "astro:transitions";
-import Analytics from '@vercel/analytics/astro'
 ---
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Najal Pulseras - Componentes y Diseños" />
-		  <ClientRouter  />
-      <Analytics />
-    <meta name="viewport" content="width=device-width" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+		<meta name="description" content="Najal Pulseras" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<ClientRouter />
+    <Analytics />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		
-    <script is:inline>
+		<script is:inline>
       const theme = (() => {
         if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-          return localStorage.getItem('theme');
+         return localStorage.getItem('theme');
         }
         return 'dark';
       })();
+
       if (theme === 'light') {
         document.documentElement.classList.remove('dark');
       } else {

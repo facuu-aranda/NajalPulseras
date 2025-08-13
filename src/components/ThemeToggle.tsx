@@ -26,7 +26,6 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      // CAMBIO: Clases para centrar el ícono y darle un tamaño consistente
       className="flex items-center justify-center w-11 h-11 text-foreground hover:bg-black/5 dark:hover:bg-white/10 rounded-lg transition-colors"
       aria-label={`Cambiar a tema ${theme === 'dark' ? 'claro' : 'oscuro'}`}
     >

@@ -6,7 +6,6 @@ import { cn } from '@/lib/utils';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
-// El tipo de imagen que Astro nos pasará
 type AstroImage = {
   src: string;
   width: number;
@@ -67,8 +66,12 @@ export default function ProductSection({ products }: ProductSectionProps) {
           </div>
         </div>
         
-        <CarouselButton className="left-0" onClick={scrollPrev}><ArrowLeft className="h-4 w-4" /></CarouselButton>
-        <CarouselButton className="right-0" onClick={scrollNext}><ArrowRight className="h-4 w-4" /></CarouselButton>
+        <CarouselButton className="left-0" onClick={scrollPrev} aria-label="Ver producto anterior">
+            <ArrowLeft className="h-4 w-4" />
+        </CarouselButton>
+        <CarouselButton className="right-0" onClick={scrollNext} aria-label="Ver producto siguiente">
+            <ArrowRight className="h-4 w-4" />
+        </CarouselButton>
       </div>
 
       <AnimatePresence>
