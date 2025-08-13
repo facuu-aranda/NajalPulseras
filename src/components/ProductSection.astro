@@ -1,0 +1,116 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { Badge } from '@/components/ui/Badge.tsx';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+
+interface AstroImage {
+  src: string | ImageMetadata;
+}
+interface Product {
+  id: string;
+  name: string;
+  description: string;
+  price: string;
+  badge?: string;
+  recommendation: string;
+  images: AstroImage[];
+  quoteUrl: string;
+}
+interface Props {
+  products: Product[];
+}
+
+const { products } = Astro.props;
+---
+
+<div class="relative group">
+  <div class="overflow-hidden -mx-4 px-4" id="embla-viewport">
+    <div class="flex py-4" id="embla-container">
+      {products.map((product) => (
+        <div class="embla__slide min-w-0 shrink-0 grow-0 basis-full md:basis-[45%] lg:basis-[31%]">
+          <div class="card transition-transform duration-300 hover:scale-105 cursor-pointer" data-product-json={JSON.stringify(product)}>
+            <div class="group/card relative overflow-hidden rounded-lg pointer-events-none">
+              <Image 
+                src={product.images[0].src}
+                alt={product.name}
+                width={600}
+                height={600}
+                format="webp"
+                quality={85}
+                class="w-full h-72 object-cover rounded-lg"
+              />
+              {product.badge && (
+                <Badge variant="secondary" className="absolute top-4 left-4">{product.badge}</Badge>
+              )}
+            </div>
+            <div class="pt-4 pointer-events-none">
+              <h4 class="font-futura font-bold text-lg text-foreground">{product.name}</h4>
+              <p class="font-futura text-najal-secondary-light mt-1 text-sm">{product.description}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <button id="prev-btn" aria-label="Producto anterior" class="carousel-btn left-0">
+    <ArrowLeft className="h-4 w-4" />
+  </button>
+  <button id="next-btn" aria-label="Producto siguiente" class="carousel-btn right-0">
+    <ArrowRight className="h-4 w-4" />
+  </button>
+</div>
+
+<style>
+  .carousel-btn {
+    @apply absolute h-8 w-8 rounded-full bg-background/70 backdrop-blur-sm hover:bg-background flex items-center justify-center text-foreground disabled:opacity-30 top-1/2 -translate-y-1/2 z-10 transition-opacity opacity-0 group-hover:opacity-100;
+  }
+  
+  .embla__slide {
+    margin-right: 1.5rem;
+  }
+</style>
+
+<script>
+  import('embla-carousel').then(({ default: EmblaCarousel }) => {
+    const viewport = document.getElementById('embla-viewport');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    if (!viewport) return;
+
+    const options = { loop: true, align: 'start' };
+    const emblaApi = EmblaCarousel(viewport, options);
+
+    if (prevBtn) prevBtn.addEventListener('click', () => emblaApi.scrollPrev());
+    if (nextBtn) nextBtn.addEventListener('click', () => emblaApi.scrollNext());
+
+    let pointerDownPos = { x: 0, y: 0 };
+
+    viewport.addEventListener('pointerdown', (event) => {
+      pointerDownPos = { x: event.clientX, y: event.clientY };
+    });
+
+    viewport.addEventListener('click', (event) => {
+      const pointerUpPos = { x: event.clientX, y: event.clientY };
+      const deltaX = Math.abs(pointerUpPos.x - pointerDownPos.x);
+      const deltaY = Math.abs(pointerUpPos.y - pointerDownPos.y);
+
+      if (deltaX > 10 || deltaY > 10) {
+        return; 
+      }
+
+      const clickedCard = event.target.closest('.card');
+      if (clickedCard) {
+        const productData = clickedCard.getAttribute('data-product-json');
+        if (productData) {
+          const customEvent = new CustomEvent('open-product-modal', {
+            detail: { product: JSON.parse(productData) }
+          });
+          document.dispatchEvent(customEvent);
+        }
+      }
+    });
+  });
+</script>
