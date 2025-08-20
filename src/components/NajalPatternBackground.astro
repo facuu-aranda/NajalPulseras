@@ -1,43 +1,48 @@
-
 ---
-// src/components/NajalPatternBackground.astro (NUEVA VERSIÓN OPTIMIZADA)
 import { cn } from '@/lib/utils';
-import { Image } from 'astro:assets'; // Importamos Image en lugar de getImage
+import { getImage } from 'astro:assets';
 import najalPattern from '@/assets/najal-pattern.png';
-
 
 interface Props {
   variant?: "light" | "dark" | "primary";
   opacity?: number;
   className?: string;
-  isHero?: boolean; // Prop para identificar si es la imagen del Hero
 }
 
-const { variant = "light", opacity = 0.1, className, isHero = false } = Astro.props;
+const { variant = "light", opacity = 0.1, className } = Astro.props;
+
+// Forzamos a Astro a crear una versión pequeña y optimizada de la imagen
+// para usarla como un patrón repetible. Esto reduce drásticamente el tamaño del archivo.
+const optimizedPatternTile = await getImage({
+  src: najalPattern,
+  format: 'webp',
+  quality: 10,
+  width: 1400, // Un tamaño de tile razonable
+});
 
 const variantClasses = {
   light: "bg-gray-50 dark:bg-zinc-900",
   dark: "bg-najal-primary-dark",
   primary: "bg-najal-primary"
 };
+
 const finalClasses = cn("relative overflow-hidden", variantClasses[variant], className);
+
+const patternStyle = `
+  background-image: url('${optimizedPatternTile.src}');
+  opacity: ${opacity};
+`;
 ---
 
 <div class={finalClasses}>
-  <Image 
-    src={najalPattern}
-    alt="Fondo con patrón de Najal"
-    quality={80}
-    format="webp"
-    class:list={[
-      "absolute inset-0 w-full h-full object-cover object-center bg-repeat -z-10",
-      `opacity-[${opacity}]`
-    ]}
-    loading={isHero ? "eager" : "lazy"}
-    fetchpriority={isHero ? "high" : "auto"}
-    style="background-size: 120dvw;"
-  />
+  {/* Este div contendrá el patrón de fondo repetido */}
+  <div 
+    class="absolute inset-0 bg-repeat" 
+    style={patternStyle}
+    role="presentation"
+  ></div>
 
+  {/* El contenido del componente se renderiza por encima del fondo */}
   <div class="relative z-10">
     <slot />
   </div>
