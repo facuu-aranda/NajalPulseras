@@ -1,50 +1,44 @@
----
-// src/components/NajalPatternBackground.astro (ACTUALIZADO)
 
+---
+// src/components/NajalPatternBackground.astro (NUEVA VERSIÓN OPTIMIZADA)
 import { cn } from '@/lib/utils';
-// --- CAMBIO 1: Importamos getImage y la imagen directamente desde assets ---
-import { getImage } from 'astro:assets';
+import { Image } from 'astro:assets'; // Importamos Image en lugar de getImage
 import najalPattern from '@/assets/najal-pattern.png';
+
 
 interface Props {
   variant?: "light" | "dark" | "primary";
   opacity?: number;
   className?: string;
+  isHero?: boolean; // Prop para identificar si es la imagen del Hero
 }
 
-const { variant = "light", opacity = 0.1, className } = Astro.props;
-
-// --- CAMBIO 2: Procesamos la imagen para optimizarla ---
-// La convertimos a WebP, que es mucho más ligera, y ajustamos la calidad.
-const optimizedPattern = await getImage({
-  src: najalPattern,
-  format: 'webp',
-  quality: 75,
-});
+const { variant = "light", opacity = 0.1, className, isHero = false } = Astro.props;
 
 const variantClasses = {
-  light: "bg-gray-50 dark:bg-zinc-900", // Mejoramos el color para modo claro/oscuro
+  light: "bg-gray-50 dark:bg-zinc-900",
   dark: "bg-najal-primary-dark",
   primary: "bg-najal-primary"
 };
-
-const finalClasses = cn("relative", variantClasses[variant], className);
-
-// --- CAMBIO 3: Usamos la URL de la imagen optimizada ---
-// La variable `optimizedPattern.src` contendrá la ruta a la imagen .webp procesada.
-const patternStyle = `
-  background-image: url('${optimizedPattern.src}');
-  background-size: 120dvw;
-  opacity: ${opacity};
-`;
+const finalClasses = cn("relative overflow-hidden", variantClasses[variant], className);
 ---
 
 <div class={finalClasses}>
-  <div class="absolute inset-0 bg-repeat" style={patternStyle}></div>
+  <Image 
+    src={najalPattern}
+    alt="Fondo con patrón de Najal"
+    quality={80}
+    format="webp"
+    class:list={[
+      "absolute inset-0 w-full h-full object-cover object-center bg-repeat -z-10",
+      `opacity-[${opacity}]`
+    ]}
+    loading={isHero ? "eager" : "lazy"}
+    fetchpriority={isHero ? "high" : "auto"}
+    style="background-size: 120dvw;"
+  />
 
-  {Astro.slots.has("default") && (
-    <div class="relative z-10">
-      <slot />
-    </div>
-  )}
+  <div class="relative z-10">
+    <slot />
+  </div>
 </div>
