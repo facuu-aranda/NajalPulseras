@@ -53,7 +53,14 @@ const finalContainerClasses = cn('inline-flex items-center gap-3', className);
 {variant === 'full' && (
   <div class={finalContainerClasses}>
     <div class:list={[sizeClasses[size], 'aspect-square relative']}>
-      <Image src={logoSrc} alt="Najal Logo" class="h-full w-full object-contain" />
+      <Image 
+  src={logoSrc} 
+  alt="Najal Logo Icon" 
+  class="h-full w-auto object-contain"
+  width={32}
+  height={32}
+  densities={[1.5, 2]}
+/>
     </div>
     {/* Usamos 'text-foreground' que cambia automáticamente con el tema */}
     <span class:list={['font-futura font-bold tracking-wider text-foreground', textSizeClasses[size]]}>

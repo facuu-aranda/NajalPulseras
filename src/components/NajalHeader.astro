@@ -37,14 +37,14 @@ const ctaHref = "#comprar";
       {/* ANTES: <div class="flex items-center space-x-4  md:block"> */}
       {/* AHORA: Contenedor correcto para escritorio */}
       <div class="hidden md:flex items-center space-x-4">
-        <ThemeToggle client:load />
+        <ThemeToggle client:idle />
         <NajalButton href={ctaHref}>{ctaText}</NajalButton>
       </div>
 
       {/* El menú móvil se mantiene igual */}
       <div class="md:hidden">
         <NajalHeaderMobile 
-          client:load
+          client:visible
           navigation={navigation}
           ctaText={ctaText}
           ctaHref={ctaHref}

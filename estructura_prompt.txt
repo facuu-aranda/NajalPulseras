@@ -3,11 +3,12 @@
 Estoy trabajando en el siguiente proyecto:
 
 📌 **Descripción del proyecto:**  
-sad
+
 
 📂 **Estructura del proyecto:**  
 - 📁 najal-pulseras-landing-page
   - 📄 astro.config.mjs
+  - 📄 components-gallery.astro
   - 📄 package-lock.json
   - 📄 package.json
   - 📄 postcss.config.cjs
@@ -36,8 +37,10 @@ sad
       - 📄 logoTipo.png
       - 📄 najal-pattern.png
       - 📁 Productos
+        - 📁 backup
         - 📁 Entradas
-          - 📄 Entrada.jpeg
+          - 📄 Entrada.jpg
+          - 📁 backup
         - 📁 Glitter
           - 📄 Glitter (1).jpg
           - 📄 Glitter (2).jpg
@@ -47,9 +50,15 @@ sad
         - 📁 Holográficas
           - 📄 Holograficas-CasoDeUso.PNG
           - 📄 Holograficas-Colors.jpg
+          - 📁 backup
+            - 📄 Holograficas-CasoDeUso.PNG
+            - 📄 Holograficas-CasoDeUso.webp
+            - 📄 Holograficas-Colors.jpg
+            - 📄 Holograficas-Colors.webp
         - 📁 Porta Credenciales
           - 📄 PortaCredenciales (1).jpg
           - 📄 PortaCredenciales (2).jpg
+          - 📄 PortaCredenciales-CasoDeUso.jpg
           - 📄 PortaCredenciales-CasoDeUso.PNG
           - 📄 PortaCredenciales.jpeg
         - 📁 PVC
@@ -92,7 +101,9 @@ sad
       - 📄 NajalServicesSection.astro
       - 📄 NajalTestimonialsSection.astro
       - 📄 NajalText.astro
+      - 📄 ProductModal.astro
       - 📄 ProductModal.tsx
+      - 📄 ProductSection.astro
       - 📄 ProductSection.tsx
       - 📄 ThemeToggle.tsx
       - 📁 ui
@@ -106,11 +117,10 @@ sad
     - 📁 lib
       - 📄 utils.ts
     - 📁 pages
-      - 📄 components-gallery.astro
       - 📄 index.astro
     - 📁 styles
       - 📄 global.css
 
-Quiero que me vayas pidiendo todos los archivos del proyecto uno por uno para que los puedas guardar en tu contexto. Una vez los tengas, podremos comenzar a trabajar sobre ellos con mayor precisión.
+Quiero que me vayas pidiendo todos los archivos del proyecto de 10 en 10 para que los puedas guardar en tu contexto. Una vez los tengas, podremos comenzar a trabajar sobre ellos con mayor precisión.
 
 Por favor, indicá cuál archivo necesitás primero.
