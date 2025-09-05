@@ -9,7 +9,7 @@ import ProductSection from '@/components/ProductSection.astro';
 import content from '@/data/content.json';
 import { getImage } from 'astro:assets'; // Mantenemos getImage para otros usos si es necesario
 
-const imageModules = import.meta.glob('/src/assets/Productos/**/*.{jpeg,jpg,PNG,png}');
+const imageModules = import.meta.glob('/src/assets/Productos/**/*.{jpeg,jpg,PNG,png,webp}');
 
 const processedProducts = await Promise.all(content.products.map(async (product) => {
   const resolvedImages = await Promise.all(product.images.map(async (imgPath) => {
@@ -17,7 +17,7 @@ const processedProducts = await Promise.all(content.products.map(async (product)
     
     if (imageModules[fullPath]) {
       const module = await imageModules[fullPath]();
-      return { src: module.default }; // Devolvemos el módulo de imagen importado
+      return { src: module.default }; 
     }
     
     console.warn(`Imagen no encontrada: ${imgPath}.`);
@@ -33,7 +33,7 @@ const navItems = [
   { label: "Comprar", href: "#comprar" },
 ];
 ---
-<Layout title="Najal Pulseras - Landing Definitiva">
+<Layout title="Najal Pulseras">
   <NajalHeader navigation={navItems} />
   <main>
     <NajalHero

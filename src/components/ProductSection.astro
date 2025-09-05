@@ -10,6 +10,7 @@ interface AstroImage {
 interface Product {
   id: string;
   name: string;
+  shortDescription: string;
   description: string;
   price: string;
   badge?: string;
@@ -46,7 +47,7 @@ const { products } = Astro.props;
             </div>
             <div class="pt-4 pointer-events-none">
               <h4 class="font-futura font-bold text-lg text-foreground">{product.name}</h4>
-              <p class="font-futura text-najal-secondary-light mt-1 text-sm">{product.description}</p>
+              <p class="font-futura text-najal-secondary-light mt-1 text-sm">{product.shortDescription}</p>
             </div>
           </div>
         </div>

@@ -1,6 +1,4 @@
 ---
-// src/layouts/Layout.astro (VERSIÓN FINAL)
-
 import '@/styles/global.css';
 import { cn } from '@/lib/utils';
 import { ClientRouter } from "astro:transitions";
@@ -17,7 +15,7 @@ const { title, className } = Astro.props;
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Najal Pulseras - Componentes y Diseños" />
+		<meta name="description" content="Najal Pulseras - Home" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<ClientRouter />
     <Analytics />
@@ -101,7 +99,7 @@ const { title, className } = Astro.props;
 
       if (modalTitleMobile) modalTitleMobile.textContent = product.name;
       if (modalTitleDesktop) modalTitleDesktop.textContent = product.name;
-      if (modalDescription) modalDescription.textContent = product.description;
+      if (modalDescription) modalDescription.innerHTML = product.description;
       if (modalRecommendation) modalRecommendation.textContent = product.recommendation;
       if (modalQuoteLink) modalQuoteLink.href = product.quoteUrl;
 

@@ -1,18 +1,24 @@
 ---
-// src/components/ProductModal.astro (ACTUALIZADO PARA TRANSICIÓN)
+// src/components/ProductModal.astro (ACTUALIZADO CON LAYOUT BALANCEADO)
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 ---
 <div id="product-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 hidden transition-opacity duration-300 opacity-0">
-  <div id="modal-content" class="bg-background rounded-lg shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col relative transition-transform duration-300 scale-95">
+  
+  {/* Contenedor principal del modal: Define la altura máxima y es una columna flex */}
+  <div id="modal-content" class="bg-background rounded-lg shadow-2xl w-full max-w-4xl max-h-[60dvh] flex flex-col relative transition-transform duration-300 scale-95">
     
     <button id="modal-close-btn" aria-label="Cerrar modal" class="absolute -top-3 -right-3 z-10 p-1 bg-najal-primary text-white rounded-full shadow-lg">
       <X size={20} />
     </button>
     
-    <div class="grid md:grid-cols-2 gap-6 md:gap-8 p-6 md:p-8 overflow-y-auto">
+    {/* --- CAMBIO 1: Este contenedor ahora es flexible para que su contenido (las columnas) pueda usar el espacio verticalmente --- */}
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8 p-6 md:p-8 flex-1 min-h-0 overflow-hidden">
+      
+      {/* Columna Izquierda (Imagen) */}
       <div class="flex flex-col gap-4">
         <h2 id="modal-title-mobile" class="font-futura font-bold text-3xl text-primary md:hidden"></h2>
         
+        {/* Mantenemos el aspect-square para que la imagen sea siempre cuadrada */}
         <div class="relative aspect-square overflow-hidden rounded-md bg-card">
           <img id="modal-image-a" src="" alt="" class="modal-image absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 opacity-0" />
           <img id="modal-image-b" src="" alt="" class="modal-image absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 opacity-0" />
@@ -21,19 +27,28 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
           <button id="modal-next-btn" aria-label="Siguiente imagen" class="absolute right-2 top-1/2 -translate-y-1/2 p-1 bg-white/50 rounded-full text-foreground"><ChevronRight size={24}/></button>
         </div>
       </div>
-      <div class="flex flex-col">
-        <h2 id="modal-title-desktop" class="font-futura font-bold text-3xl text-primary hidden md:block"></h2>
-        <p id="modal-description" class="mt-4 text-foreground/80"></p>
-        <div class="mt-6 bg-card p-4 rounded-md border border-border">
+      
+      {/* Columna Derecha (Detalles) */}
+      <div class="flex flex-col overflow-hidden">
+        <h2 id="modal-title-desktop" class="font-futura font-bold text-3xl text-primary hidden md:block flex-shrink-0"></h2>
+        
+        {/* --- CAMBIO 2: Este div ahora se expande y permite el scroll interno --- */}
+        <div id="modal-description" class="mt-4 text-foreground/80 overflow-y-auto min-h-0 pr-3 flex-1">
+          {/* El contenido HTML se insertará aquí */}
+        </div>
+        
+        {/* El resto de los elementos se mantendrán fijos en la parte inferior 
+        <div class="mt-6 bg-card p-4 rounded-md border border-border flex-shrink-0">
           <h3 class="font-bold text-secondary">Recomendación de uso:</h3>
           <p id="modal-recommendation" class="mt-2 text-sm text-foreground/70"></p>
-        </div>
-        <div class="mt-auto pt-6">
+        </div>*/}
+        
+      </div>
+    </div>
+    <div class="mt-auto p-6 flex-shrink-0">
           <a id="modal-quote-link" href="" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full rounded-lg font-futura font-medium transition-colors bg-najal-primary text-white hover:bg-najal-primary/90 h-12 px-6 text-base">
             Solicitar Presupuesto
           </a>
         </div>
-      </div>
-    </div>
   </div>
 </div>

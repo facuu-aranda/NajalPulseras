@@ -61,7 +61,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
       transition={{ duration: 0.2 }}
     >
       <motion.div
-        className="bg-background rounded-lg shadow-2xl w-11/12 max-w-4xl max-h-[90vh] flex flex-col relative"
+        className="bg-background rounded-lg shadow-2xl w-11/12 max-w-4xl max-h-[20vh] flex flex-col relative"
         initial={{ scale: 0.95, y: 20 }}
         animate={{ scale: 1, y: 0 }}
         exit={{ scale: 0.95, y: 20 }}
@@ -100,7 +100,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
 
           <div className="flex flex-col">
             <h2 className="font-futura font-bold text-3xl text-primary hidden md:block">{product.name}</h2>
-            <p className="mt-4 text-foreground/80">{product.description}</p>
+            <p className="mt-4 text-foreground/80 overflow-scroll">{product.description}</p>
             <div className="mt-6 bg-card p-4 rounded-md border border-border">
               <h3 className="font-bold text-secondary">Recomendación de uso:</h3>
               <p className="mt-2 text-sm text-foreground/70">{product.recommendation}</p>

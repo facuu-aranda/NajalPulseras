@@ -1,24 +1,24 @@
 {
   "products": [
     {
-      "id": "prod_glitter",
-      "name": "Pulseras Glitter",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "price": "$150.00",
-      "badge": "Brillante",
-      "recommendation": "Perfectas para festivales y eventos nocturnos donde quieras destacar.",
+      "id": "prod_tyvek",
+      "name": "Pulseras Tyvek",
+      "shortDescription": "Económicas e intransferibles, perfectas para eventos de un solo día.",
+      "description": "<p>🌟 ¡El detalle simple que soluciona tu evento! 🌟</p><p>Nuestras pulseras Tyvek son ideales para control de acceso y se adaptan a cualquier tipo de evento:</p><ul><li>✔️ Fiestas privadas y recepciones: identificá a tus invitados fácilmente.</li><li>✔️ Recitales y festivales: resistentes al agua y al desgarro, duran toda la jornada.</li><li>✔️ Bailes y boliches: garantizan seguridad con cierre inviolable.</li><li>✔️ Eventos deportivos: perfectas para jugadores, staff o público.</li><li>✔️ Parques acuáticos y piletas: 100% resistentes al agua.</li><li>✔️ Turismo y excursiones: identifican grupos y facilitan la organización.</li><li>✔️ Empresas y colegios: control en viajes de estudio, egresados y eventos internos.</li></ul><br><p>🎨 Además, son personalizables con tu logo, frase o diseño especial.</p><p>🔒 Seguridad, control y estilo en una sola pulsera.</p>",
+      "price": "$90.00",
+      "recommendation": "Económicas e intransferibles, perfectas para eventos de un solo día.",
       "images": [
-        "/Productos/Glitter/Glitter.jpeg",
-        "/Productos/Glitter/Glitter (1).jpg",
-        "/Productos/Glitter/Glitter (2).jpg",
-        "/Productos/Glitter/Glitter (3).jpg"
+        "/Productos/Tyvek/Tyvek.jpeg",
+        "/Productos/Tyvek/Tyvek-Colors.jpg",
+        "/Productos/Tyvek/Tyvek-CasoDeUso.PNG"
       ],
-      "quoteUrl": "https://wa.me/+5493564575862?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Glitter"
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Tyvek"
     },
     {
       "id": "prod_holograficas",
       "name": "Pulseras Holográficas",
-      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "shortDescription": "Un toque futurista y premium para ocasiones especiales.",
+      "description": "<p>Las pulseras holográficas se destacan por su acabado brillante con efecto arcoíris que cambia según la luz. ✨</p><br><p><b>🔹 Características principales:</b></p><ul><li>• Material de PVC.</li><li>• Efecto holográfico llamativo (ideal para dar un toque premium).</li><li>• Cierre inviolable con adhesivo, evitando reutilización.</li><li>• Colores disponibles: Plata, oro, azul, rojo, fucsia, lila, verde, celeste y amarillo.</li></ul><p><b>🔹 Usos comunes:</b></p><ul><li>• Eventos VIP, recitales y festivales.</li><li>• Fiestas privadas, boliches y discotecas.</li><li>• Acceso a zonas exclusivas y promociones de marca.</li></ul>",
       "price": "$180.00",
       "badge": "Nuevo",
       "recommendation": "Un toque futurista y llamativo para cualquier ocasión especial.",
@@ -28,10 +28,38 @@
       ],
       "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Holográficas"
     },
+     {
+      "id": "prod_nylon",
+      "name": "Pulseras de Nylon",
+      "shortDescription": "Resistencia, comodidad y diseño sin límites con impresión full color.",
+      "description": "<p>Las pulseras full color de nylon son una alternativa premium que combina resistencia, comodidad y diseño sin límites. 🌈✨</p><br><p><b>🔹 Características principales:</b></p><ul><li>• Material: nylon suave y duradero, ideal para uso prolongado.</li><li>• Impresión full color, lo que permite diseños detallados, degradados y fotos.</li><li>• Cierre de seguridad adhesivo con troquel que evita el traspaso.</li></ul><p><b>🔹 Usos recomendados:</b></p><ul><li>• Festivales, recitales y eventos masivos.</li><li>• Hoteles, resorts y cruceros.</li><li>• Acreditaciones VIP o staff.</li></ul>",
+      "price": "$180.00",
+      "badge": "Nuevo",
+      "recommendation": "Un toque futurista y llamativo para cualquier ocasión especial.",
+      "images": [
+        "/Productos/placeholder.webp"
+      ],
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20Nylon"
+    },
+    {
+      "id": "prod_pvc",
+      "name": "Pulseras de PVC",
+      "shortDescription": "Resistentes y seguras, la opción ideal para uso prolongado.",
+      "description": "<p>Garantizá la seguridad y organización de tus eventos con nuestras pulseras de PVC de alta resistencia.</p><ul><li>✓ Broche de seguridad inviolable – una vez cerradas, no se pueden reutilizar.</li><li>✓ Resistentes al agua y al desgaste, ideales para uso prolongado.</li><li>✓ Personalizables con tu logo, colores y diseños únicos, impresión en color negro.</li></ul><br><p>Perfectas para recitales, festivales, eventos deportivos, parques acuáticos y ferias.</p>",
+      "price": "$120.00",
+      "recommendation": "Resistentes y seguras, la opción perfecta para control de acceso en eventos.",
+      "images": [
+        "/Productos/PVC/PVC.jpeg",
+        "/Productos/PVC/PVC-Colors.jpg",
+        "/Productos/PVC/PVC_CasoDeUso.PNG"
+      ],
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20PVC"
+    },
     {
       "id": "prod_tela",
       "name": "Pulseras de Tela",
-      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "shortDescription": "La opción más segura y estética, un recuerdo duradero del evento.",
+      "description": "<p>Una de las opciones más seguras y estéticas para el control de acceso en eventos. 🌟</p><br><p><b>🔹 Características:</b></p><ul><li>• Material textil resistente (poliéster).</li><li>• Cierre de seguridad tipo ajustable plástico, que impide reutilización.</li><li>• Se pueden personalizar con logos, textos o diseños a todo color.</li><li>• Cómodas para llevar durante varios días.</li></ul><p><b>🔹 Usos comunes:</b></p><ul><li>• Festivales, congresos, hoteles, accesos VIP y acreditaciones exclusivas.</li></ul>",
       "price": "$250.00",
       "badge": "Más Vendido",
       "recommendation": "Ideales para eventos corporativos, festivales y como recuerdo duradero.",
@@ -44,35 +72,23 @@
       "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20Tela"
     },
     {
-      "id": "prod_pvc",
-      "name": "Pulseras de PVC",
-      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "price": "$120.00",
-      "recommendation": "Resistentes y seguras, la opción perfecta para control de acceso en eventos.",
+      "id": "prod_entradas",
+      "name": "Entradas de Seguridad",
+      "shortDescription": "Máxima protección y diseño exclusivo para tus tickets.",
+      "description": "<p>Dale a tu fiesta, recital o show la exclusividad y seguridad que merece con nuestras entradas de máxima protección. 🎟️</p><ul><li>✨ <b>Faja holográfica:</b> evita falsificaciones y le da un acabado único.</li><li>🔒 <b>Doble troquel:</b> mayor control en accesos y cortes de seguridad.</li><li>💡 <b>Tinta UV invisible:</b> solo visible bajo luz ultravioleta.</li><li>⚡ <b>Tinta flúo al frente:</b> brilla bajo la luz negra.</li></ul><br><p>Diseño 100% personalizable y ideal para todo tipo de eventos.</p>",
+      "price": "$250.00",
+      "badge": "Más Vendido",
+      "recommendation": "Ideales para recitales, boliches, fiestas privadas y festivales.",
       "images": [
-        "/Productos/PVC/PVC.jpeg",
-        "/Productos/PVC/PVC-Colors.jpg",
-        "/Productos/PVC/PVC_CasoDeUso.PNG"
+        "/Productos/Entradas/Entrada.jpg"
       ],
-      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20PVC"
-    },
-    {
-      "id": "prod_tyvek",
-      "name": "Pulseras Tyvek",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "price": "$90.00",
-      "recommendation": "Económicas e intransferibles, perfectas para eventos de un solo día.",
-      "images": [
-        "/Productos/Tyvek/Tyvek.jpeg",
-        "/Productos/Tyvek/Tyvek-Colors.jpg",
-        "/Productos/Tyvek/Tyvek-CasoDeUso.PNG"
-      ],
-      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Tyvek"
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Entradas"
     },
     {
       "id": "prod_vasos",
       "name": "Vasos Personalizados",
-      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "shortDescription": "Reutilizables, ecológicos y un recuerdo único para tus invitados.",
+      "description": "<p>Hacé que tu evento se destaque con nuestros vasos plásticos reutilizables. 🥤</p><ul><li>✔️ Medidas disponibles: 500 cm³ y 750 cm³.</li><li>✔️ Impresión personalizada con tu logo, frase o diseño.</li><li>✔️ Resistentes, duraderos y ecológicos.</li></ul><br><p>🌟 Además, tus invitados se llevan un recuerdo único del evento. ¡Convertí tus vasos en parte de la experiencia!</p>",
       "price": "$300.00",
       "badge": "Pack Fiesta",
       "recommendation": "El complemento ideal para tus eventos, con diseños que no se borran.",
@@ -82,6 +98,49 @@
         "/Productos/Vasos/Vaso-CasoDeUso.jpg"
       ],
       "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Vasos%20Personalizados"
+    },
+    {
+      "id": "prod_portaCredenciales",
+      "name": "Portacredenciales",
+      "shortDescription": "Identificación profesional y duradera para eventos y uso corporativo.",
+      "description": "<p>Las cintas porta credenciales sublimables con mosquetón son un producto súper versátil y personalizable.</p><br><p><b>🔹 Características principales:</b></p><ul><li>• Material: poliéster sublimable para diseños a full color.</li><li>• Incluye mosquetón metálico para sujetar credenciales o llaves.</li><li>• Ancho de 2 cm, cómodas y resistentes.</li></ul><br><p><b>🔹 Usos más comunes:</b> Empresas, ferias, congresos, eventos deportivos y regalos corporativos.</p>",
+      "price": "$300.00",
+      "badge": "Pack Fiesta",
+      "recommendation": "El complemento ideal para tus eventos, con diseños que no se borran.",
+      "images": [
+        "/Productos/Porta Credenciales/PortaCredenciales (1).jpg",
+        "/Productos/Porta Credenciales/PortaCredenciales (2).jpg",
+        "/Productos/Porta Credenciales/PortaCredenciales-CasoDeUso.PNG"
+      ],
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Portacredenciales"
+    },
+    {
+      "id": "prod_glitter",
+      "name": "Pulseras Glitter",
+      "shortDescription": "Añade un toque de brillo y glamour a tus eventos.",
+      "description": "<p>Destaca y brilla con nuestras pulseras Glitter, la opción perfecta para fiestas, eventos nocturnos y celebraciones especiales. Su acabado resplandeciente captura la luz y todas las miradas.</p><br><p><b>Ideal para:</b></p><ul><li>✓ Fiestas y discotecas.</li><li>✓ Eventos de gala y celebraciones.</li><li>✓ Festivales que buscan un toque extra de glamour.</li></ul>",
+      "price": "$150.00",
+      "badge": "Brillante",
+      "recommendation": "Perfectas para festivales y eventos nocturnos donde quieras destacar.",
+      "images": [
+        "/Productos/Glitter/Glitter.jpeg",
+        "/Productos/Glitter/Glitter (1).jpg",
+        "/Productos/Glitter/Glitter (2).jpg",
+        "/Productos/Glitter/Glitter (3).jpg"
+      ],
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Glitter"
+    },
+    {
+      "id": "prod_vinilo",
+      "name": "Pulseras de Vinilo",
+      "shortDescription": "Duraderas y cómodas, ideales para eventos de varios días.",
+      "description": "<p>Las pulseras de Vinilo son una opción superior en durabilidad y confort. Su material flexible y resistente las hace perfectas para un uso prolongado en festivales, parques temáticos y resorts.</p><br><p><b>Características principales:</b></p><ul><li>✓ Broche de seguridad de un solo uso.</li><li>✓ Altamente resistentes al agua y al uso intensivo.</li><li>✓ Superficie lisa ideal para personalización.</li></ul>",
+      "price": "$190.00",
+      "recommendation": "La mejor opción para eventos de varios días que requieren máxima durabilidad.",
+      "images": [
+        "/Productos/Vinilo/Vinilo.jpeg"
+      ],
+      "quoteUrl": "https://wa.me/123456789?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20Vinilo"
     }
   ],
   "testimonials": [
