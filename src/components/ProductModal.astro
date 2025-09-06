@@ -1,18 +1,15 @@
 ---
-// src/components/ProductModal.astro (ACTUALIZADO CON LAYOUT BALANCEADO)
+// src/components/ProductModal.astro (ACTUALIZADO CON SUB-CONTENEDOR)
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 ---
-
 <div
   id="product-modal"
   class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 hidden transition-opacity duration-300 opacity-0"
 >
-  {
-    /* Contenedor principal del modal: Define la altura máxima y es una columna flex */
-  }
+  {/* Contenedor principal: define la altura MÁXIMA y el layout de columna (cuerpo + pie) */}
   <div
     id="modal-content"
-    class="bg-background rounded-lg shadow-2xl w-full max-w-4xl max-h-[90dvh] md:max-h-[60dvh] flex flex-col relative transition-transform duration-300 scale-95"
+    class="bg-background rounded-lg shadow-2xl w-full max-w-4xl max-h-[90vh] md:max-h-[70vh] flex flex-col relative transition-transform duration-300 scale-95"
   >
     <button
       id="modal-close-btn"
@@ -22,80 +19,42 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
       <X size={20} />
     </button>
 
-    {
-      /* --- CAMBIO 1: Este contenedor ahora es flexible para que su contenido (las columnas) pueda usar el espacio verticalmente --- */
-    }
-    <div
-      class="grid md:grid-cols-2 gap-6 md:gap-8 p-6 md:p-8 flex-1 min-h-0 overflow-scroll md:overflow-hidden "
-    >
-      {/* Columna Izquierda (Imagen) */}
-      <div class="flex flex-col gap-4">
-        <h2
-          id="modal-title-mobile"
-          class="font-futura font-bold text-3xl text-primary md:hidden"
-        >
-        </h2>
-
-        {
-          /* Mantenemos el aspect-square para que la imagen sea siempre cuadrada */
-        }
-        <div class="relative aspect-square overflow-hidden rounded-md bg-card">
-          <img
-            id="modal-image-a"
-            src=""
-            alt=""
-            class="modal-image absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 opacity-0"
-          />
-          <img
-            id="modal-image-b"
-            src=""
-            alt=""
-            class="modal-image absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 opacity-0"
-          />
-
-          <button
-            id="modal-prev-btn"
-            aria-label="Imagen anterior"
-            class="absolute left-2 top-1/2 -translate-y-1/2 p-1 bg-white/50 rounded-full text-foreground"
-            ><ChevronLeft size={24} /></button
-          >
-          <button
-            id="modal-next-btn"
-            aria-label="Siguiente imagen"
-            class="absolute right-2 top-1/2 -translate-y-1/2 p-1 bg-white/50 rounded-full text-foreground"
-            ><ChevronRight size={24} /></button
-          >
-        </div>
-      </div>
-
-      {/* Columna Derecha (Detalles) */}
-      <div class="flex flex-col overflow-hidden">
-        <h2
-          id="modal-title-desktop"
-          class="font-futura font-bold text-3xl text-primary hidden md:block flex-shrink-0"
-        >
-        </h2>
-
-        {
-          /* --- CAMBIO 2: Este div ahora se expande y permite el scroll interno --- */
-        }
-        <div
-          id="modal-description"
-          class="mt-4 text-foreground/80 overflow-y-auto min-h-0 pr-3 flex-1"
-        >
-          {/* El contenido HTML se insertará aquí */}
+    {/* --- CAMBIO 1: Nuevo SUB-CONTENEDOR para el contenido principal --- */}
+    {/* Este `div` crece (`flex-1`) y permite el scroll (`overflow-y-auto`) de todo lo que contiene. */}
+    <div class="flex-1 min-h-0 overflow-y-auto">
+      {/* Contenedor de las columnas con layout responsive flexbox */}
+      <div class="flex flex-col md:flex-row gap-6 md:gap-8 p-6 md:p-8">
+        
+        {/* Columna Izquierda (Imagen) */}
+        <div class="md:w-1/2 flex-shrink-0">
+          <h2 id="modal-title-mobile" class="font-futura font-bold text-3xl text-primary md:hidden mb-4"></h2>
+          <div class="relative aspect-square overflow-hidden rounded-md bg-card">
+            <img id="modal-image-a" src="" alt="" class="modal-image absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 opacity-0" />
+            <img id="modal-image-b" src="" alt="" class="modal-image absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 opacity-0" />
+            <button id="modal-prev-btn" aria-label="Imagen anterior" class="absolute left-2 top-1/2 -translate-y-1/2 p-1 bg-white/50 rounded-full text-foreground"><ChevronLeft size={24} /></button>
+            <button id="modal-next-btn" aria-label="Siguiente imagen" class="absolute right-2 top-1/2 -translate-y-1/2 p-1 bg-white/50 rounded-full text-foreground"><ChevronRight size={24} /></button>
+          </div>
         </div>
 
-        {
-          /* El resto de los elementos se mantendrán fijos en la parte inferior 
-        <div class="mt-6 bg-card p-4 rounded-md border border-border flex-shrink-0">
-          <h3 class="font-bold text-secondary">Recomendación de uso:</h3>
-          <p id="modal-recommendation" class="mt-2 text-sm text-foreground/70"></p>
-        </div>*/
-        }
+        {/* Columna Derecha (Detalles) */}
+        <div class="flex flex-col md:w-1/2">
+          <h2 id="modal-title-desktop" class="font-futura font-bold text-3xl text-primary hidden md:block flex-shrink-0"></h2>
+          
+          <div id="modal-description" class="mt-4 text-foreground/80 md:overflow-y-auto min-h-0 md:pr-3 flex-1">
+           
+          </div>
+           {/* El contenido HTML se insertará aquí 
+          <div class="mt-6 bg-card p-4 rounded-md border border-border flex-shrink-0">
+            <h3 class="font-bold text-secondary">Recomendación de uso:</h3>
+            <p id="modal-recommendation" class="mt-2 text-sm text-foreground/70"></p>
+          </div>*/}
+        </div>
       </div>
     </div>
-    <div class="mt-auto p-6 flex-shrink-0">
+
+    {/* --- CAMBIO 2: El botón ahora es el "pie de página" del modal --- */}
+    {/* Está fuera del sub-contenedor, por lo que no se ve afectado por el scroll. */}
+    <div class="p-6 border-t border-border/20 flex-shrink-0">
       <a
         id="modal-quote-link"
         href=""
@@ -107,4 +66,4 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
       </a>
     </div>
   </div>
-</div>
+</div> 
