@@ -7,7 +7,9 @@ import NajalCTASection from '@/components/NajalCTASection.astro';
 import NajalHeading from '@/components/NajalHeading.astro';
 import ProductSection from '@/components/ProductSection.astro'; 
 import content from '@/data/content.json';
-import { getImage } from 'astro:assets'; // Mantenemos getImage para otros usos si es necesario
+import NajalServicesSection from '@/components/NajalServicesSection.astro';
+import { getImage } from 'astro:assets';
+import WhatsApp from '@/components/WhatsApp.astro';
 
 const imageModules = import.meta.glob('/src/assets/Productos/**/*.{jpeg,jpg,PNG,png,webp}');
 
@@ -51,11 +53,11 @@ const navItems = [
             <NajalHeading level={2} variant="primary">Nuestros Productos</NajalHeading>
         </div>
         
-        {/* --- CAMBIO 3: Usamos el nuevo componente de Astro (ya no necesita directiva client:*) --- */}
         <ProductSection products={processedProducts} />
 
       </div>
     </section>
+     <NajalServicesSection services={content.services}/>
 
  
     <div id="opiniones">
@@ -66,4 +68,5 @@ const navItems = [
       <NajalCTASection variant="primary" />
     </div>
   </main>
+  <WhatsApp phoneNumber="+543564448033" message="Hola, estoy interesado en sus productos." />
 </Layout>

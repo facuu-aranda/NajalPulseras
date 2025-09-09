@@ -3,7 +3,6 @@
 import NajalCard from "@/components/NajalCard.astro";
 import NajalCardContent from "@/components/NajalCardContent.astro";
 import NajalHeading from "@/components/NajalHeading.astro";
-import NajalPatternBackground from "@/components/NajalPatternBackground.astro";
 import NajalText from "@/components/NajalText.astro";
 import { Icon } from "astro-icon/components";
 
@@ -23,8 +22,7 @@ interface Props {
 // Recibo las props
 const { testimonials } = Astro.props;
 ---
-<NajalPatternBackground variant="dark" className="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
             <NajalHeading level={2} variant="light" className="mb-4">La opinión de nuestros clientes</NajalHeading>
             <NajalText size="lg" className="text-white/80 max-w-2xl mx-auto">La satisfacción y la confianza son el núcleo de lo que hacemos.</NajalText>
@@ -61,4 +59,3 @@ const { testimonials } = Astro.props;
             ))}
         </div>
     </div>
-</NajalPatternBackground>

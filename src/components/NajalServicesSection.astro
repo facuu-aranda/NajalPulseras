@@ -4,9 +4,10 @@ import NajalCardContent from "@/components/NajalCardContent.astro";
 import NajalCardHeader from "@/components/NajalCardHeader.astro";
 import NajalCardTitle from "@/components/NajalCardTitle.astro";
 import NajalHeading from "@/components/NajalHeading.astro";
-import NajalPatternBackground from "@/components/NajalPatternBackground.astro";
 import NajalText from "@/components/NajalText.astro";
 import { Icon } from "astro-icon/components";
+import NajalPatternBackground from "@/components/NajalPatternBackground.astro";
+
 interface Service {
   title: string;
   description: string;
@@ -17,7 +18,7 @@ interface Props {
 }
 const { services } = Astro.props;
 ---
-<NajalPatternBackground variant="light" className="py-20">
+<NajalPatternBackground variant="dark" className="py-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <NajalHeading level={2} variant="primary" className="mb-4">Más que un producto, un servicio completo</NajalHeading>
