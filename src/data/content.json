@@ -23,6 +23,7 @@
       "badge": "Nuevo",
       "recommendation": "Un toque futurista y llamativo para cualquier ocasión especial.",
       "images": [
+        "/Productos/Holográficas/Holografica.png",
         "/Productos/Holográficas/Holograficas-Colors.jpg",
         "/Productos/Holográficas/Holograficas-CasoDeUso.PNG"
       ],
@@ -37,7 +38,9 @@
       "badge": "Nuevo",
       "recommendation": "Un toque futurista y llamativo para cualquier ocasión especial.",
       "images": [
-        "/Productos/placeholder.webp"
+        "/Productos/Nylon/Nylon (2).jpg",
+        "/Productos/Nylon/Nylon.jpg",
+        "/Productos/Nylon/Nylon (3).jpg"
       ],
       "quoteUrl": "https://wa.me/+543564448033?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20Nylon"
     },
@@ -64,8 +67,8 @@
       "badge": "Más Vendido",
       "recommendation": "Ideales para eventos corporativos, festivales y como recuerdo duradero.",
       "images": [
-        "/Productos/Tela/Tela.jpg",
         "/Productos/Tela/Tela (1).jpeg",
+        "/Productos/Tela/Tela.jpg",
         "/Productos/Tela/Tela (2).jpeg",
         "/Productos/Tela/Tela-CasoDeUso.PNG"
       ],
@@ -108,6 +111,7 @@
       "badge": "Pack Fiesta",
       "recommendation": "El complemento ideal para tus eventos, con diseños que no se borran.",
       "images": [
+        "/Productos/Porta Credenciales/PortaCredenciales.jpeg",
         "/Productos/Porta Credenciales/PortaCredenciales (1).jpg",
         "/Productos/Porta Credenciales/PortaCredenciales (2).jpg",
         "/Productos/Porta Credenciales/PortaCredenciales-CasoDeUso.PNG"
@@ -123,7 +127,7 @@
       "badge": "Brillante",
       "recommendation": "Perfectas para festivales y eventos nocturnos donde quieras destacar.",
       "images": [
-        "/Productos/Glitter/Glitter.jpeg",
+        "/Productos/Glitter/Glitter.jpg",
         "/Productos/Glitter/Glitter (1).jpg",
         "/Productos/Glitter/Glitter (2).jpg",
         "/Productos/Glitter/Glitter (3).jpg"
