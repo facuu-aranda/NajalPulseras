@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { ClientRouter } from "astro:transitions";
 import Analytics from '@vercel/analytics/astro';
 import ProductModal from '@/components/ProductModal.astro';
+import NajalFooter from '@/components/NajalFooter.astro';
 
 interface Props {
 	title: string;
@@ -41,7 +42,7 @@ const { title, className } = Astro.props;
 	</head>
 	<body class={cn("bg-background font-futura antialiased", className)}>
 		<slot />
-
+    <NajalFooter />
     <ProductModal />
 
     {/* --- SCRIPT DE CONTROL DEL MODAL --- */}

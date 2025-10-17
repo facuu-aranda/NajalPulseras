@@ -83,7 +83,9 @@
       "badge": "Más Vendido",
       "recommendation": "Ideales para recitales, boliches, fiestas privadas y festivales.",
       "images": [
-        "/Productos/Entradas/Entrada.jpg"
+        "/Productos/Entradas/Entrada.jpg",
+        "/Productos/Entradas/Entrada(1).jpg",
+        "/Productos/Entradas/Entrada(2).jpg"
       ],
       "quoteUrl": "https://wa.me/+543564350054?text=Hola,%20quisiera%20un%20presupuesto%20para%20Entradas"
     },

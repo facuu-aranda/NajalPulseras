@@ -1,0 +1,133 @@
+---
+import NajalLogo from "@/components/NajalLogo.astro";
+import NajalText from "@/components/NajalText.astro";
+import { Icon } from "astro-icon/components";
+
+const footerData = {
+  companyName: "Najal Pulseras",
+  // ¡NUEVO! Usa coordenadas en formato "Grados, Minutos, Segundos, Dirección"
+  coordinates: "31°24'33.3\"S 62°04'50.1\"W",
+  address: "San Francisco, Córdoba, Argentina",
+  contacts: [
+    {
+      type: "whatsapp",
+      name: "Atención Comercial (24/7)",
+      number: "+543564350054",
+      icon: "mdi:whatsapp"
+    },
+    {
+      type: "whatsapp",
+      name: "Atención al Cliente (0900-18:00)",
+      number: "+543564448033",
+      icon: "mdi:whatsapp"
+    }
+  ],
+  socials: [
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/najalpulseras/",
+      icon: "mdi:instagram"
+    },
+    {
+      name: "Facebook",
+      url: "https://www.facebook.com/profile.php?id=100070378693358",
+      icon: "mdi:facebook"
+    }
+  ]
+};
+
+// Función para convertir coordenadas DMS a Decimal
+function convertDMSToDecimal(dms) {
+  const parts = dms.match(/(\d+)°(\d+)'([\d\.]+)"([NSEW])/);
+  if (!parts) return 0;
+  
+  let degrees = parseFloat(parts[1]);
+  let minutes = parseFloat(parts[2]);
+  let seconds = parseFloat(parts[3]);
+  const direction = parts[4];
+
+  let decimal = degrees + minutes / 60 + seconds / 3600;
+
+  if (direction === 'S' || direction === 'W') {
+    decimal = decimal * -1;
+  }
+  
+  return decimal;
+}
+
+// Generamos la URL de Google Maps
+const [latDMS, lonDMS] = footerData.coordinates.split(" ");
+const latDecimal = convertDMSToDecimal(latDMS);
+const lonDecimal = convertDMSToDecimal(lonDMS);
+
+const googleMapsUrl = `https://www.google.com/maps?q=${latDecimal},${lonDecimal}&z=15&output=embed`;
+const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${latDecimal},${lonDecimal}`;
+---
+
+<footer class="bg-card text-card-foreground/80 py-12 border-t border-border">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      {/* Columna 1: Logo e Info */}
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <NajalLogo size="md" />
+        <NajalText size="sm" className="mt-4 max-w-xs text-foreground/70">
+          {footerData.companyName} - Identificación y seguridad para tus eventos.
+        </NajalText>
+      </div>
+
+      {/* Columna 2: Contacto */}
+      <div class="flex flex-col items-center md:items-start">
+        <h3 class="font-bold text-lg mb-4 text-foreground">Contacto</h3>
+        <ul class="space-y-3">
+          {footerData.contacts.map(contact => (
+            <li>
+              <a href={`https://wa.me/${contact.number.replace(/\+/g, '')}`} target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-foreground/80 hover:text-primary transition-colors">
+                <Icon name={contact.icon} class="h-6 w-6" />
+                <span class="font-medium">{contact.name}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="flex flex-col items-center md:items-start">
+        <h3 class="font-bold text-lg mb-4 text-foreground">Seguinos</h3>
+        <ul class="flex gap-4">
+          {footerData.socials.map(social => (
+            <li>
+              <a href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name} class="block p-2 bg-foreground/10 rounded-full hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all">
+                <Icon name={social.icon} class="h-6 w-6" />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="flex flex-col items-center md:items-start">
+        <h3 class="font-bold text-lg mb-4 text-foreground">Ubicación</h3>
+        <a href={googleMapsLink} target="_blank" rel="noopener noreferrer" class="mb-2 text-foreground/70 hover:text-primary transition-colors">
+            <NajalText size="sm" className="text-foreground">{footerData.address}</NajalText>
+        </a>
+        <div class="w-full h-32 rounded-lg overflow-hidden border-2 border-border/50">
+          <iframe
+            src={googleMapsUrl}
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de la empresa en Google Maps"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-border/50 text-center text-sm">
+      <NajalText size="sm" className="text-foreground/60">
+        © {new Date().getFullYear()} {footerData.companyName}. Todos los derechos reservados.
+      </NajalText>
+    </div>
+  </div>
+</footer>
