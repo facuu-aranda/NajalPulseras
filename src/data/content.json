@@ -12,7 +12,7 @@
         "/Productos/Tyvek/Tyvek-Colors.jpg",
         "/Productos/Tyvek/Tyvek-CasoDeUso.PNG"
       ],
-      "quoteUrl": "https://wa.me/+543564448033?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Tyvek"
+      "quoteUrl": "https://wa.me/+543564350054?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Tyvek"
     },
     {
       "id": "prod_holograficas",
@@ -27,7 +27,7 @@
         "/Productos/Holográficas/Holograficas-Colors.jpg",
         "/Productos/Holográficas/Holograficas-CasoDeUso.PNG"
       ],
-      "quoteUrl": "https://wa.me/+543564448033?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Holográficas"
+      "quoteUrl": "https://wa.me/+543564350054?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Holográficas"
     },
      {
       "id": "prod_nylon",
@@ -42,7 +42,7 @@
         "/Productos/Nylon/Nylon.jpg",
         "/Productos/Nylon/Nylon (3).jpg"
       ],
-      "quoteUrl": "https://wa.me/+543564448033?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20Nylon"
+      "quoteUrl": "https://wa.me/+543564350054?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20Nylon"
     },
     {
       "id": "prod_pvc",
@@ -56,7 +56,7 @@
         "/Productos/PVC/PVC-Colors.jpg",
         "/Productos/PVC/PVC_CasoDeUso.PNG"
       ],
-      "quoteUrl": "https://wa.me/+543564448033?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20PVC"
+      "quoteUrl": "https://wa.me/+543564350054?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20PVC"
     },
     {
       "id": "prod_tela",
@@ -72,7 +72,7 @@
         "/Productos/Tela/Tela (2).jpeg",
         "/Productos/Tela/Tela-CasoDeUso.PNG"
       ],
-      "quoteUrl": "https://wa.me/+543564448033?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20Tela"
+      "quoteUrl": "https://wa.me/+543564350054?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20Tela"
     },
     {
       "id": "prod_entradas",
@@ -85,7 +85,7 @@
       "images": [
         "/Productos/Entradas/Entrada.jpg"
       ],
-      "quoteUrl": "https://wa.me/+543564448033?text=Hola,%20quisiera%20un%20presupuesto%20para%20Entradas"
+      "quoteUrl": "https://wa.me/+543564350054?text=Hola,%20quisiera%20un%20presupuesto%20para%20Entradas"
     },
     {
       "id": "prod_vasos",
@@ -100,7 +100,7 @@
         "/Productos/Vasos/Vaso-Colors.jpg",
         "/Productos/Vasos/Vaso-CasoDeUso.jpg"
       ],
-      "quoteUrl": "https://wa.me/+543564448033?text=Hola,%20quisiera%20un%20presupuesto%20para%20Vasos%20Personalizados"
+      "quoteUrl": "https://wa.me/+543564350054?text=Hola,%20quisiera%20un%20presupuesto%20para%20Vasos%20Personalizados"
     },
     {
       "id": "prod_portaCredenciales",
@@ -116,7 +116,7 @@
         "/Productos/Porta Credenciales/PortaCredenciales (2).jpg",
         "/Productos/Porta Credenciales/PortaCredenciales-CasoDeUso.PNG"
       ],
-      "quoteUrl": "https://wa.me/+543564448033?text=Hola,%20quisiera%20un%20presupuesto%20para%20Portacredenciales"
+      "quoteUrl": "https://wa.me/+543564350054?text=Hola,%20quisiera%20un%20presupuesto%20para%20Portacredenciales"
     },
     {
       "id": "prod_glitter",
@@ -132,7 +132,7 @@
         "/Productos/Glitter/Glitter (2).jpg",
         "/Productos/Glitter/Glitter (3).jpg"
       ],
-      "quoteUrl": "https://wa.me/+543564448033?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Glitter"
+      "quoteUrl": "https://wa.me/+543564350054?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20Glitter"
     },
     {
       "id": "prod_vinilo",
@@ -144,12 +144,12 @@
       "images": [
         "/Productos/Vinilo/Vinilo.jpeg"
       ],
-      "quoteUrl": "https://wa.me/+543564448033?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20Vinilo"
+      "quoteUrl": "https://wa.me/+543564350054?text=Hola,%20quisiera%20un%20presupuesto%20para%20Pulseras%20de%20Vinilo"
     }
   ],
   "testimonials": [
     {
-      "quote": "La calidad es increíble y el diseño es súper original. Se ha convertido en mi accesorio favorito.",
+      "quote": "La calidad es increíble y el diseño es súper original. Se convertieron en mis proveedores favoritos.",
       "author": "Marcos López",
       "role": "Cliente Verificado",
       "rating": 5
@@ -161,7 +161,7 @@
       "rating": 5
     },
     {
-      "quote": "Compré un brazalete para un regalo y fue un éxito total. La atención al cliente es de primera.",
+      "quote": "Compré pulseras y vasos para mi casamiento y fue un éxito total. La atención al cliente es de primera.",
       "author": "Javier Fernández",
       "role": "Cliente Verificado",
       "rating": 5
